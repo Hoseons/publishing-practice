@@ -1,0 +1,125 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Noto Sans KR', sans-serif, Arial, Helvetica, sans-serif;
+    color: #333;
+    font-size: 14px;
+    background-image: url(images/topbg.jpg);
+    background-repeat:repeat-x;
+    background-color: #d6d6d6;
+    /* background: #d6d6d6 url(images/topbg.jpg) repeat-x */
+}
+ul,li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+img{
+    border: none;
+    vertical-align: middle;/* 폼태그와 이미지 태그에 세로 정렬 사용 */
+}
+
+.wrap{
+    width: 900px;
+    margin: 0 auto;
+}
+.header{
+    width: 100%;
+    height: 102px;
+}
+.logo{
+    float: left;
+    margin-top: 35px;
+    width: 233px;
+    height: 35px;
+}
+.gnb{
+    float: right;
+    margin-top: 45px;
+    
+}
+
+.gnb li{
+    float: left;
+    margin-left: 40px;
+    
+    
+}
+.gnb li a{
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.gnb li a:hover{
+    color: rgb(156, 156, 33);
+    transition: 0.3s;
+    text-decoration: underline;
+}
+
+.visual{
+    clear: both;
+    width: 900px;
+    height: 414px;
+}
+
+.main{
+    width: 900px;
+    height: 127px;
+    
+    padding-top: 10px;
+}
+.main>div{
+    float: left;
+    width: 300px;
+    height: 127px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 0 0;
+    padding-left: 140px;
+    padding-top: 20px;
+}
+
+.main>div:nth-child(1){
+    background-image: url(images/ban1.jpg);
+    
+}
+.main>div:nth-child(2){
+    background-image: url(images/ban2.jpg);
+  
+}
+.main>div:nth-child(3){
+    background-image: url(images/ban3.jpg);
+   
+}
+
+.main>div p{
+    line-height: 1.5;
+}
+.main>div a:hover{
+    color: #be9659;
+
+}
+.footer{
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    line-height: 22px;
+    font-family: "나눔고딕","Nanum Gohic";
+    font-weight: 100;
+    font-size: 13px;
+}
+
+.footer p{
+    color: #ddd;
+    text-align: center;
+}

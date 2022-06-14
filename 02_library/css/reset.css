@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    font:16px 'NanumSquare', sans-serif !important;
+    line-height:1;
+    color:#262626;
+}
+input, textarea, button {
+    font:14px 'NanumSquare', sans-serif !important;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size:inherit;
+    font-weight:normal;
+}
+ul, ol, li {
+    list-style:none;
+}
+img, fieldset, input {
+    border:none;
+    vertical-align:top;
+}
+a {
+    text-decoration:none;
+    color:#393939;
+}
+input::placeholder, textarea::placeholder {
+    color:#939393;
+    font-weight:300;
+}
+/* input::-webkit-input-placeholder {} */
+
+.clear:after {
+    content:'';
+    display:block;
+    clear:both;
+}
+.hide {
+    height:0;
+    font-size:1px;
+    overflow:hidden;
+}
+.fixed {
+    width:1200px;
+    margin:0 auto;
+}
+
+legend{
+    display: none;
+}

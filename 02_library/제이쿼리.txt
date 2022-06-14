@@ -1,0 +1,18 @@
+<script src="js/jquery-3.6.0.min.js"></script>
+  <script>
+      $(document).ready(function(){
+          var $nav=$('header nav > ul > li'),
+              $sub=$('header nav > ul > li ul, .sub_bg');
+
+              $sub.hide();
+              $nav.hover(function(){
+                  $('.header_wrap').addClass('on');
+                  $sub.stop().slideDown();
+              }, function(){
+                  $sub.stop().slideUp(function(){
+                      $('.header_wrap').removeClass('on');
+                  });
+              });
+
+      });
+  </script>
