@@ -42,15 +42,29 @@
                 return false /* 맨위로 올라가는거 없애기 */
 
               });
-
-      });
-      var i = 1;
-      $(".next_btn").click(function(){
-
-      });
-      $(".pre_btn").click(function(){
-        
-      });
+              var i = 1;
+              $('.next_btn').click(function(){
+                /* IF(조건문){실행문} */
+                if(i<6){
+                  $('.footer_banner ul').animate({
+                    marginLeft:'-=231px'
+                  });
+                  i++;
+                }
+                return false;
+              });
+              $('.prev_btn').click(function(){
+                  if(i>1){
+                    $('.footer_banner ul').animate({
+                      marginLeft:'+=231px'
+                    });
+                    i--;
+                  }
+                return false;
+              });
+            });
+            
+            
 
   </script>
 </head>
@@ -102,8 +116,7 @@
                 <li>
                     <a href="#">신간도서</a>
                 </li>
-                <li>
-                    <a href="#">추천도서</a>
+                <li class="go"><a href="book.html">추천도서</a>
                 </li>
                 <li>
                     <a href="#">대출베스트도서</a>
@@ -422,6 +435,33 @@
       </ul>
     </div>
   </div>
-  <footer></footer> 
+  <footer>
+
+    <div class="footer_wrap fixed clear">
+      <div class="footer_logo">
+        <a href="index.html"><img src="images/common/f_logo.png" alt="푸터로고"></a>
+      </div>
+       
+      <div class="footer_right">
+        <div class="guide">
+          <ul class="clear">
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">저작권정책</a></li>
+            <li><a href="#">이메일주소 무단수집거부</a></li>
+            <li><a href="#">찾아오시는길</a></li>
+          </ul>
+        </div>
+        <div class="footer_text">
+          <p>
+            (30101) 세종특별자치시 세종로 1207(고운동 2103) 
+            Tel:044-301-4300<br>
+            한솔 044-301-6125 | 도담 044-301-6220 |
+            한솔 044-301-6125 도담 044-301-6220 <br>
+            COPYRIGHT &copy; 세종특별자치시 시립도서관. ALL RIGHTS RESERVED.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer> 
 </body>
 </html>

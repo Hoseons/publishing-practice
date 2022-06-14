@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>국립세종도서관</title>
+  <link rel="stylesheet" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script>
+      $(document).ready(function(){
+          var $nav=$('header nav > ul > li'),
+              $sub=$('header nav > ul > li ul, .sub_bg');
+
+              $sub.hide();
+              $nav.hover(function(){
+                  $('.header_wrap').addClass('on');
+                  $sub.stop().slideDown();
+              }, function(){
+                  $sub.stop().slideUp(function(){
+                      $('.header_wrap').removeClass('on');
+                  });
+              });
+          
+              var $content = $('.tab_content div');
+              var $title = $('.tab_title a');
+
+              $content.hide();
+              $content.eq(0).show();/* eq ~번째를 가르킴 */
+              $title.click(function(){
+                $title.removeClass('on');
+                $(this).addClass('on');
+                /* this=내가 클릭한 */
+
+                var $Index =$(this).index();
+                /* 0 ==.tab_title a:nth-child(1) */
+                $content.fadeOut();/* 모두 숨겨라 */
+                
+                $content.eq($Index).fadeIn(); /* 선택한거 나타나기 */
+                return false /* 맨위로 올라가는거 없애기 */
+
+              });
+              var i = 1;
+              $('.next_btn').click(function(){
+                /* IF(조건문){실행문} */
+                if(i<6){
+                  $('.footer_banner ul').animate({
+                    marginLeft:'-=231px'
+                  });
+                  i++;
+                }
+                return false;
+              });
+              $('.prev_btn').click(function(){
+                  if(i>1){
+                    $('.footer_banner ul').animate({
+                      marginLeft:'+=231px'
+                    });
+                    i--;
+                  }
+                return false;
+              });
+            });
+            
+            
+
+  </script>
+</head>
+<body>
+  <div class="header_wrap">
+    <div class="min_nav fixed">
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+      </ul>
+    </div>
+    <header class="fixed">
+      <h1 class="logo"><a href="index.html">logo</a></h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="#">도서관안내</a>
+            <ul>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">조직도</a></li>
+              <li><a href="#">도서관현황</a></li>
+              <li><a href="#">도서관소식</a></li>
+              <li><a href="#">디지털자료실예약</a></li>
+              <li><a href="#">도서관견학신청</a></li>
+              <li><a href="#">찾아오시는길</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">이용안내</a>
+            <ul>
+                <li>
+                    <a href="#">이용시간안내</a>
+                </li>
+                <li>
+                    <a href="#">자원봉사안내</a>
+                </li>
+                <li>
+                    <a href="#">온라인수강신청</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">자료검색</a>
+            <ul>
+                <li>
+                    <a href="#">소장자료검색</a>
+                </li>
+                <li>
+                    <a href="#">신간도서</a>
+                </li>
+                <li>
+                    <a href="#">추천도서</a>
+                </li>
+                <li>
+                    <a href="#">대출베스트도서</a>
+                </li>
+                <li>
+                    <a href="#">희망도서신청</a>
+                </li>
+                <li>
+                    <a href="#">대출안내</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">행사안내</a>
+            <ul>
+                <li>
+                    <a href="#">문화강좌</a>
+                </li>
+                <li>
+                    <a href="#">한책하나구미운동</a>
+                </li>
+                <li>
+                    <a href="#">독서교실</a>
+                </li>
+                <li>
+                    <a href="#">어린이영어교실</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">참여공간</a>
+            <ul>
+                <li>
+                    <a href="#">공지사항</a>
+                </li>
+                <li>
+                    <a href="#">자유게시판</a>
+                </li>
+                <li>
+                    <a href="#">포토갤러리</a>
+                </li>
+                <li>
+                    <a href="#">자료마당</a>
+                </li>
+                <li>
+                    <a href="#">설문조사</a>
+                </li>
+            </ul>
+        </li>
+        </ul>
+      </nav>
+      <div class="sub_bg"></div>
+    </header>
+  </div>
+  <div class="visual_img">
+    <img src="images/main/visual.jpg" alt="도서관이미지">
+  </div>
+  <div class="search">
+    <form action="">
+      <fieldset>
+        <legend>검색</legend>
+        <input type="text" placeholder="검색어를 입력하세요">
+        <a href="#"><img src="images/common/search.png" alt="검색"></a>
+      </fieldset>
+    </form>
+  </div>
+  <main>
+    <div class="sub_wrap fixed">
+      <div class="left_nav">
+        <div class="title">자료검색</div>
+        <ul>
+          <li><a href="#">소장자료검색</a></li>
+          <li><a href="#">신간도서</a></li>
+          <li class="go"><a href="book.html">추천도서</a></li>
+          <li><a href="#">대출베스트도서</a></li>
+          <li><a href="#">희망도서신청</a></li>
+          <li><a href="#">대출안내</a></li>
+        </ul>
+      </div>
+      <div class="history">
+        <div class="content">
+          <span>HOME</span>
+          <span>자료검색</span>
+          <span>추천도서</span>
+        </div>
+        <h2 class="title">추천도서</h2>
+        <div class="text_wrap">
+          <div class="book">
+            <div class="img">
+              <img src="images/sub/thewall.png" alt="더월">
+            </div>
+            <div class="txt">
+              <h3>더월</h3>
+              <ul>
+                <li>
+                  <span>지은이</span>
+                  <p></p>
+                </li>
+                <li>
+                  <span>출판사</span>
+                  <p></p>
+                </li>
+                <li>
+                  <span>발행년</span>
+                  <p></p>
+                </li>
+                <li>
+                  <span>청구기호</span>
+                  <p>843.6-20-138.2</p>
+                </li>
+                <li>
+                  <span>가격</span>
+                  <p></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="write">
+            <div>
+              <h3>추천글</h3>
+              <p></p>
+            </div>
+          </div>
+          <div class="write">
+            <div>
+              <h3>목차</h3>
+              <ul>
+                <li>1장 벽 4</li>
+                <li>2장 상대 134</li>
+                <li>3장 바다 198</li>
+                <li>...</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="footer_banner">
+    <div class="overflow fixed">
+      <ul class="clear">
+        <li><a href="#"><img src="/images/common/banner01.png" alt="배너"></a></li>
+        <li><a href="#"><img src="/images/common/banner02.png" alt="배너"></a></li>
+        <li><a href="#"><img src="/images/common/banner03.png" alt="배너"></a></li>
+        <li><a href="#"><img src="/images/common/banner04.png" alt="배너"></a></li>
+        <li><a href="#"><img src="/images/common/banner05.png" alt="배너"></a></li>
+        <li><a href="#"><img src="/images/common/banner06.png" alt="배너"></a></li>
+        <li><a href="#"><img src="/images/common/banner07.png" alt="배너"></a></li>
+        <li><a href="#"><img src="/images/common/banner08.png" alt="배너"></a></li>
+        <li><a href="#"><img src="/images/common/banner09.png" alt="배너"></a></li>
+        <li><a href="#"><img src="/images/common/banner10.png" alt="배너"></a></li>
+        <div class="btn">
+          <div class="prev_btn">
+            <a href="#"><img src="/images/common/btn_prev.png" alt="이전버튼"></a>
+          </div>
+          <div class="next_btn">
+            <a href="#"><img src="/images/common/btn_next.png" alt="다음버튼"></a>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </div>
+  <footer>
+
+    <div class="footer_wrap fixed clear">
+      <div class="footer_logo">
+        <a href="index.html"><img src="images/common/f_logo.png" alt="푸터로고"></a>
+      </div>
+       
+      <div class="footer_right">
+        <div class="guide">
+          <ul class="clear">
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">저작권정책</a></li>
+            <li><a href="#">이메일주소 무단수집거부</a></li>
+            <li><a href="#">찾아오시는길</a></li>
+          </ul>
+        </div>
+        <div class="footer_text">
+          <p>
+            (30101) 세종특별자치시 세종로 1207(고운동 2103) 
+            Tel:044-301-4300<br>
+            한솔 044-301-6125 | 도담 044-301-6220 |
+            한솔 044-301-6125 도담 044-301-6220 <br>
+            COPYRIGHT &copy; 세종특별자치시 시립도서관. ALL RIGHTS RESERVED.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer> 
+</body>
+</html>

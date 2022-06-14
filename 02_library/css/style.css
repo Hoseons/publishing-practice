@@ -470,3 +470,60 @@ main{
   position: absolute;
   right: 0;
 }
+
+/* footer */
+
+footer{
+  background: #262626;
+}
+.footer_wrap{
+  padding: 50px 0;
+  
+}
+.footer_wrap > div{
+  float: left;
+}
+.footer_logo{
+
+}
+.footer_right{
+  color: #fff;
+  width: 730px;
+  /* border: 1px solid #00f; */
+  margin: 3px  0  0 180px;
+}
+.footer_right .guide{
+  margin-bottom: 36px;
+}
+.footer_right .guide ul li{
+  float: left;
+}
+.footer_right .guide ul li~li{
+  margin-left: 15px;
+}
+.footer_right .guide ul li:nth-child(1){
+  font-weight: bold;
+}
+.footer_right .guide ul li a{
+  color: #fff;
+  position: relative;
+}
+.footer_right .guide ul li a::before{
+  width: 1px;
+  height: 14px;
+  background: #eee;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: -7px;
+}
+.footer_right .guide ul li:nth-child(1) a::before{
+ display: none;
+}
+.footer_right .footer_text{
+font-weight: 300;
+}
+.footer_right .footer_text p{
+  line-height: 1.6;
+}
