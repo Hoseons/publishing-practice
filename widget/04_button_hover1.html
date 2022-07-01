@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            height: 100%;
+        }
+        body{
+            font: 14px 'Noto Sans', sans-serif;
+            line-height: 1;
+            color: #333;
+            height: 100%;
+            background: #fff;
+        }
+        a{
+            color: #333;
+            text-decoration: none;
+        }
+        .btn1{
+            width: 25%;
+            position: relative;
+            left: 10%;
+            top: 10%;
+            text-align: center;
+            overflow: hidden;
+        }
+        .btn1 a{
+            font-size: 14px;
+            border: 2px solid #333;
+            display: block;
+            padding: 20px;
+            transition: all .5s ease-in-out;
+        }
+        .btn1 a::before{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: -100%;
+            top: 0;
+            z-index: -1;
+            background: #f5df4d;
+            transition: all .5s ease-in-out;
+        }
+        .btn1  a:hover::before{
+            left: 0%;
+        }
+        .btn1  a:hover{
+            color: #fff;
+        }
+        .btn2{
+            width: 25%;
+            position: relative;
+            left: 10%;
+            top: 30%;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .btn2 a{
+            font-size: 14px;
+            border: 2px solid #333;
+            display: block;
+            padding: 20px;
+            transition: all .5s ease-in-out;
+        }
+        .btn2 a::before{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            bottom: -100%;
+            z-index: -1;
+            background: #4dc5f5;
+            transition: all .5s ease-in-out;
+        }
+        .btn2  a:hover::before{
+            bottom: 0;
+        }
+        .btn2  a:hover{
+            color: #fff;
+        }
+
+        .btn3{
+            width: 25%;
+            position: relative;
+            left: 10%;
+            top: 50%;
+            text-align: center;
+            overflow: hidden;
+        }
+        .btn3 a{
+            font-size: 14px;
+            border: 2px solid #333;
+            display: block;
+            padding: 20px;
+            transition: all .5s ease-in-out;
+        }
+        .btn3 a::before{
+            content: "";
+            width: 120%;
+            height: 100%;
+            position: absolute;
+            left: -140%;
+            top: 0;
+            z-index: -1;
+            background: #d34df5;
+            transition: all .5s ease-in-out;
+            transform: skewX(30deg);
+        }
+        .btn3  a:hover::before{
+            left: -10%;
+        }
+        .btn3  a:hover{
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn1">
+        <a href="#">
+            <span>horizontal</span>
+        </a>
+        
+    </div>
+
+    <div class="btn2">
+        <a href="#">
+            <span>vertical</span>
+        </a>
+        
+    </div>
+
+    <div class="btn3">
+        <a href="#">
+            <span>skew</span>
+        </a>
+    
+    </div>
+
+</body>
+</html>

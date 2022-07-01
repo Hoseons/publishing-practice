@@ -1,0 +1,175 @@
+html,body{width: 100%;height: 100%;margin: 0;padding: 0;font-family: 'Open Sans',sans-serif;}
+a{text-decoration: none;}
+input[type="checkbox"]{display: none;}/*체크박스 안보이게 */
+
+/*그리드 - 현재 엘리먼트에서는 three 적용*/
+.twelve{width: 100%;}
+.eleven{width: 91.53%;}
+.ten{width: 83.06%;}
+.nine{width: 74.6%;}
+.eight{width: 66.13%;}
+.seven{width: 57.66%;}
+.six{width: 49.2%}
+.five{width: 40.73%;}
+.four{width: 32.26%;}/* 3등분*/
+.three{width: 23.8%;}
+.two{width: 15.33%}
+.one{width: 6.866%;}
+
+/* 전체 박스의 fruid  설정*/
+.container{width: 100%;max-width: 940px;margin: 0 auto;position: relative;text-align: center;background: #ccc;}
+
+/*각 박스 작업*/
+
+/*각 줄에(cb)에 무조건 줄바꿈*/
+.cb:before,.cb:after{content: "";display: table;}
+.cb:after{clear: both;}
+.cb{*zoom:1;}
+/*
+display: table-->요소를 표(table)처럼 표현
+.cb{clear: both;}<--이렇게 표현하기 보다는
+clear 해주기 위해서는 float된 요소 다음에 clear하는 태그를 따로 삽입해야 하는 불편함이 있다. 이때 가상 클래스 선택자를 이용하면 이 문제를 해결할 수 있다. 하지만 after가상 선택자는 IE(Internet Explorer) 8 이하 버전에서 동작하지 않는데, 컨테이너 태그에 *zoom: 1 이라는 옵션을 사용하면 비슷하게 문제가 해결
+
+*/
+/* 칼럼의 내부 속성*/
+.col{float: left;display: block;margin: 1% 0 1% 1.6%;}
+.col:first-of-type{margin-left: 0;}
+
+/* 각 박스에 패딩을 주어 내부요소(.line)을 가운데 정렬*/
+.row .three{padding: 80px 30px;background: #2c3e50;box-sizing: border-box;color: #ecf0f1;text-align: center; }
+
+/* 각 박스의 내부요소(.line) 설정*/
+.ham{display: block;}
+.ham .line{width: 50px;height: 5px;background:#ecf0f1;display: block;margin: 8px auto; transition: all 0.3s ease-in-out;}
+.ham:hover{cursor: pointer;}
+
+/* 첫번째 박스 애니메이션*/
+#ck1:checked ~ #ham-1 .line:nth-child(1){/* 1라인 45도회전*/
+ transform:translateY(13px) rotate(45deg);
+}
+#ck1:checked ~ #ham-1 .line:nth-child(2){/*2라인 없어짐*/
+  opacity: 0;  
+}
+#ck1:checked ~ #ham-1 .line:nth-child(3){/*1라인 -45도회전*/
+   transform: translateY(-13px) rotate(-45deg); 
+}
+
+/* 두번째 박스 애니메이션*/
+#ck2:checked ~ #ham-2 .line:nth-child(1){/*1라인은 2라인 위치로 이동*/
+    transform: translateY(13px);
+}
+#ck2:checked ~ #ham-2 .line:nth-child(2){}/*그대로*/
+#ck2:checked ~ #ham-2 .line:nth-child(3){/*3라인은 2라인 위치로 이동*/
+    transform: translateY(-13px);
+}
+
+/* 세번째 박스 애니메이션*/
+#ck3:checked ~ #ham-3 .line:nth-child(1){/*1,3라인:폭 조절, -45도 회전*/
+    width: 40px;
+    transform:translateX(-10px) rotate(-45deg)
+}
+#ck3:checked ~ #ham-3 .line:nth-child(2){}
+#ck3:checked ~ #ham-3 .line:nth-child(3){/*45도 회전*/
+     width: 40px;
+    transform:translateX(-10px) rotate(45deg)
+}
+
+/* 네번째 박스 애니메이션*/
+#ck4:checked ~ #ham-4 .line:nth-child(1){/*1,3라인:폭 조절, 45도 회전*/
+    width: 40px;
+    transform:translateX(10px) rotate(45deg)
+}
+#ck4:checked ~ #ham-4 .line:nth-child(2){}
+#ck4:checked ~ #ham-4 .line:nth-child(3){/*-45도 회전*/
+     width: 40px;
+    transform:translateX(10px) rotate(-45deg);
+}
+
+/* 다섯번째 박스 애니메이션*/
+#ck5:checked ~ #ham-5{transform: rotate(90deg);}/*다섯번째 박스 90회전*/
+#ck5:checked ~ #ham-5 .line:nth-child(2){transition: none;}
+#ham-5 .line:nth-child(2){transition-delay: 0.3s;}
+#ck5:checked ~ #ham-5 .line:nth-child(2){
+     opacity: 0;/*0.3초 있다가 사라짐*/
+} 
+#ck5:checked ~ #ham-5 .line:nth-child(1),#ck5:checked ~ #ham-5 .line:nth-child(3){/*회전중심 이동, 폭 조절*/
+  width: 35px; transform-origin: right;
+}
+#ck5:checked ~ #ham-5 .line:nth-child(1){/*1라인은 45도 회전,세로축 아래로 이동*/
+  transform: translateY(15px) rotate(45deg);   
+}
+#ck5:checked ~ #ham-5 .line:nth-child(3){/*3라인은 -45도 회전,세로축 위로 이동*/
+    transform: translateY(-15px) rotate(-45deg); 
+}
+
+/* 여섯번째 박스 애니메이션*/
+#ck6:checked ~ #ham-6{transform: rotate(45deg);}
+ #ck6:checked ~ #ham-6 .line:nth-child(2){/* width가 짧아져 없어짐*/
+    width: 0; }
+#ck6:checked ~ #ham-6 .line:nth-child(1), #ck6:checked ~ #ham-6 .line:nth-child(3){transition-delay: 0.3s;}   
+#ck6:checked ~ #ham-6 .line:nth-child(1){ /* 1라인은 아래로 이동*/
+    transform: translateY(13px) ;}
+#ck6:checked ~ #ham-6 .line:nth-child(3){ /* 3라인은 위로 이동,90도 회전*/
+    transform: translateY(-13px) rotate(90deg); }
+
+/* 일곱번째 박스 애니메이션*/
+#ck7:checked ~ #ham-7 {transform: rotate(30deg)}/*label박스 전체 회전*/
+#ck7:checked ~ #ham-7 .line:nth-child(1){width: 30px;}/*1라인 길이 축소*/
+#ck7:checked ~ #ham-7 .line:nth-child(2){width: 40px;}/*2라인 길이 축소*/
+
+/* 여덟번째 박스 애니메이션*/
+#ck8:checked ~ #ham-8 .line:nth-child(1){transform: translateY(13px);}/*1라인 아래로 이동*/
+#ck8:checked ~ #ham-8 .line:nth-child(2){opacity: 0;}/*2라인 없어짐*/
+#ck8:checked ~ #ham-8 .line:nth-child(3){
+    transform: translateY(-13px) rotate(90deg);
+}/*위로 이동 하면서 90도 회전*/
+
+/* 아홉번째 박스의 애니메이션 */
+#ck9 ~ #ham-9 { position: relative; transition: all 0.3s ease-in-out; }
+#ck9:checked ~ #ham-9 { transform: rotate(45deg);  }
+#ck9 ~ #ham-9:before{ content: "";  position: absolute;/*margin-left: 50%;left: -35px;margin-top: 50%;top: -35px;*/ top:calc(50% - 35px); left:calc(50% - 35px);box-sizing: border-box;
+width: 70px; height: 70px; border: 5px solid transparent;
+
+border-radius: 100%; transition: all 0.3s ease-in-out;
+}
+#ck9:checked ~ #ham-9:before{  border: 5px solid #ecf0f1; }
+#ck9:checked ~ #ham-9 .line{ width: 35px; }
+#ck9:checked ~ #ham-9 .line:nth-child(2){ opacity: 0;  }
+#ck9:checked ~ #ham-9 .line:nth-child(1){ transform: translateY(13px);  }
+#ck9:checked ~ #ham-9 .line:nth-child(3){
+transform: translateY(-13px) rotate(90deg);
+}
+
+/* 열번째 박스의 애니메이션 */
+#ck10 ~ #ham-10 { transition: all 0.3s ease-in-out;  }
+#ck10:checked ~ #ham-10{ transform: rotate(90deg); }
+#ck10:checked ~ #ham-10 .line:nth-child(1){ width:30px }
+#ck10:checked ~ #ham-10 .line:nth-child(2){ width:40px }
+
+/* 열 한번째 박스의 애니메이션 */
+#ck11 ~ #ham-11{ transition: all 0.3s ease-in-out; }
+#ck11:checked ~ #ham-11{ animation: smallbig 0.6s forwards; }
+@keyframes smallbig{
+0%, 100%{ transform: scale(1); }
+50%{ transform: scale(0); }
+}
+#ck11:checked ~ #ham-11 .line:nth-child(1),
+#ck11:checked ~ #ham-11 .line:nth-child(2),
+#ck11:checked ~ #ham-11 .line:nth-child(3){ transition-delay: 0.2s; }
+#ck11:checked ~ #ham-11 .line:nth-child(2){ opacity: 0; }
+#ck11:checked ~ #ham-11 .line:nth-child(1){
+transform: translateY(13px) rotate(45deg);
+}
+#ck11:checked ~ #ham-11 .line:nth-child(3){
+transform: translateY(-13px) rotate(-45deg);
+}
+
+/* 열 두번째 박스의 애니메이션 */
+#ck12:checked ~ #ham-12 .line:nth-child(1){
+opacity: 0;   transform: translateX(-100%);
+}
+#ck12:checked ~ #ham-12 .line:nth-child(3){
+opacity: 0;
+transform: translateX(100%);
+}
+

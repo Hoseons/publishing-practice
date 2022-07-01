@@ -1,0 +1,101 @@
+@charset "uft-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+}
+html {
+    height:100%;
+}
+body {
+    font:14px 'Poppins', sans-serif;
+    line-height:1;
+    color:#333;
+    height:100%;
+    background:#fff;
+}
+
+ul, li {
+    list-style:none;
+}
+
+a {
+    color:#787878;
+    text-decoration:none;
+}
+
+.ani_bg{
+    position: fixed;left: 0;top: 0; right: 0;bottom: 0;
+}
+
+.ani_bg>div{
+    position: absolute;
+    left: 0;top: 0;
+    width: 100%;height: 100%;
+
+}
+.ani1{
+    background: url(../images/image01.jpg) no-repeat 50% / cover;
+    z-index: 4;
+    animation: ani1 16s infinite;
+}
+.ani2{
+    background: url(../images/image02.jpg) no-repeat 50% / cover;
+    z-index: 3;
+    animation: ani1 16s infinite;
+    animation-delay: 4s;
+}
+
+.ani3{
+    background: url(../images/image03.jpg) no-repeat 50% / cover;
+    z-index: 2;
+    animation: ani1 16s infinite;
+    animation-delay: 8s;
+}
+
+.ani4{
+    background: url(../images/image04.jpg) no-repeat 50% / cover;
+    z-index: 1;
+    animation: ani2 16s infinite;
+    animation-delay: 12s;
+}
+
+@keyframes ani1 {
+        0%{
+            transform: scale(1.2);
+            opacity: 1;
+        }
+        25%{
+            transform: scale(1);
+            opacity: 1;
+        }
+        50%{
+            z-index: 4;
+            opacity: 0;
+        }
+        100%{
+            opacity: 0;
+            z-index: 1;
+        }
+}
+
+@keyframes ani2 {
+    0%{
+        transform: scale(1.2);
+        opacity: 1;
+        z-index: 1;
+    }
+    25%{
+        transform: scale(1);
+        opacity: 1;
+        z-index: 5;
+    }
+    50%{    
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+

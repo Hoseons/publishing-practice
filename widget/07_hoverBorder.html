@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: 'GowunDodum-Regular';
+
+        }
+
+        body h2{
+            font-family: 'GowunDodum-Regular';
+        }
+
+        ul ,li{
+            list-style: none;
+        }
+
+        a{
+            display: block;
+            text-decoration: none;
+            width: 600px;
+            height: 400px;
+            color: #0d331c;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        a .img_box img{
+            width: 100%;
+        }
+
+
+        a .img_box{
+            position: relative;
+        }
+
+        a .img_box span{
+            display: block;
+            position: absolute;
+            background-color: #1368ab;
+            transition: all .2s;
+        }
+        a .img_box span:nth-child(1){
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 10px;
+        }
+        a .img_box span:nth-child(2){
+            right: 0;
+            top: 0;
+            width: 10px;
+            height: 0;
+        }
+        a .img_box span:nth-child(3){
+            right: 0;
+            bottom: 0;
+            width: 0;
+            height: 10px;
+        }
+        a .img_box span:nth-child(4){
+            left: 0;
+            bottom: 0;
+            width: 10px;
+            height: 0;
+        }   
+
+        a .img_box:hover span:nth-child(1){
+            width: 100%;
+        }
+        a .img_box:hover span:nth-child(2){
+            height: 100%;
+            transition-delay: 0.2s;
+        }
+        a .img_box:hover span:nth-child(3)
+        {
+            width: 100%;
+            transition-delay: 0.4s;
+        }
+
+       
+        a .img_box:hover span:nth-child(4){
+            height: 100%;
+            transition-delay: 0.6s;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="">
+        <div class="img_box">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <img src="./images/cell.jpg" alt="윰세">
+        </div>
+        <h2>유미의 세포들 시즌2</h2>
+        <ul>
+            <li>오픈:2022.06.10</li>
+            <li>채널 : Tving</li>
+            <li>기본정보 : 세포들과 함께 먹고 사랑하고 성장하는 평범한 유미의 이야기를 그린 세포 자극 공감 드라마</li>
+        </ul>
+    </a>
+   
+</body>
+</html>
