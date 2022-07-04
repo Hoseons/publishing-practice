@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메뉴연습</title>
+  <style>
+*{margin: 0;padding: 0;}
+ul,li{list-style: none;}
+a{text-decoration: none;}
+
+#gnb{
+  margin-left: 100px;
+}
+#gnb li{/* 대메뉴, 서브메뉴 모두 */
+  float: left;
+  padding: 10px;
+  position: relative;
+}
+.sub{
+  /* display: none; */
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  width: 120px;
+  height: auto;
+  background-color: rgba(0,0,0,0.7);
+  transition: 0.5s;
+}
+/* #gnb > li > a 대메뉴 */
+.dep1{
+color: #333;
+font-weight: bold;
+}
+.dep1:hover{
+  color: #c00;
+}
+ .dep1:before{
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #333;
+    margin: 5px auto;
+ }
+ .dep1:after{
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #333;
+    margin: 5px auto;
+ }
+ #gnb li:hover .dep1:before{
+  background: #c00;
+ }
+ #gnb li:hover .dep1:after{
+  background: #c00;
+ }
+ #gnb li:hover .sub{
+  /* display: block; */
+  opacity: 1;
+ }
+ #gnb .sub li{/* 서브메뉴 목록 */
+  clear: both;
+  width: 100%;
+  height: 40px;
+  padding: 0;
+ }
+.sub li a{
+display: block;/* width: 100%; */
+line-height: 40px;
+text-align: center;
+color: #fff;
+ }
+ .sub li a:hover{
+  background: #c00;
+ }
+</style>
+</head>
+<body>
+  <nav id="gnb">
+    <ul>
+      <li>
+        <a href="#" class="dep1">한눈에 거제</a>
+        <div class="sub">
+          <ul>
+            <li><a href="">메뉴11</a></li>
+            <li><a href="">메뉴12</a></li>
+            <li><a href="">메뉴13</a></li>
+            <li><a href="">메뉴14</a></li>
+            <li><a href="">메뉴15</a></li>
+          </ul>
+        </div>    
+      </li>
+      <li><a href="#" class="dep1">거제여행</a>
+        <div class="sub">
+          <ul>
+            <li><a href="">메뉴21</a></li>
+            <li><a href="">메뉴22</a></li>
+            <li><a href="">메뉴23</a></li>
+            <li><a href="">메뉴24</a></li>
+          </ul>
+        </div>    
+      </li>
+      <li><a href="#" class="dep1">즐거운 축제</a>
+        <div class="sub">
+          <ul>
+            <li><a href="">메뉴31</a></li>
+            <li><a href="">메뉴32</a></li>
+            <li><a href="">메뉴33</a></li>
+          </ul>
+        </div>    
+      </li>
+      <li><a href="#" class="dep1">역사/문화</a>
+        <div class="sub">
+          <ul>
+            <li><a href="">메뉴41</a></li>
+            <li><a href="">메뉴42</a></li>
+          </ul>
+        </div>       
+      </li>
+      <li><a href="#" class="dep1">커뮤니티</a>
+        <div class="sub">
+          <ul>
+            <li><a href="">새소식</a></li>
+            <li><a href="">행사일정</a></li>
+            <li><a href="">마이픽쳐</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</body>
+</html>

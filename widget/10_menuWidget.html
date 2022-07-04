@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu widget-1단메뉴</title>
+    <style>
+        /*reset , default*/
+        *{margin: 0;padding: 0;}
+        body,html{width: 100%;height: 100%;min-width: 1200px;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        /*공통*/
+        .title{line-height: 1.8;text-indent: 25px;margin-top: 25px;}
+        .title:after{content: "";display: block;border-bottom: 2px solid #333;}
+        .menu{width: 100%;}
+        .menuFrame{clear: both;width: 800px;margin: 20px auto;padding: 20px;height: 80px;}
+        .menu li{float: left;}
+        .menu a{color: #333;font-size: 18px;font-weight: bold;display: block;width: 100%;height: 40px;left: 40px;text-align: center;line-height: 40px;transition: 0.5s;}
+        
+        #gnb1 li{width: 25%;height: 48px;position: relative;}
+        #gnb1 a:hover{color: #005295;}
+        #gnb1 li:after{content: "";display: block; width:0%;height: 2px;background: transparent; transition: 0.5s;position: absolute;bottom: 0;right: 0;}
+        #gnb1 li:hover:after{width: 100%;background:#005295;}
+        #gnb1 li:before{content: "";display: block; width:0%;height: 2px;background: transparent; transition: 0.5s;/*position: absolute;top: 0;left: 0;*/margin: 0 auto;}
+        #gnb1 li:hover::before{width: 100%;background:#005295;}
+        
+        #gnb2 .menuFrame{width: 480px;}
+        #gnb2 li{padding: 10px;}
+        #gnb2 a{color: #005295;padding: 10px;}
+        #gnb2 a:hover{background:#005295 ; color: #fff;}
+        
+        #gnb3 .menuFrame{width: 480px;}
+        #gnb3 li{padding: 10px;}
+        #gnb3 a{overflow: hidden; /*width: 100px;*/}
+        #gnb3 a span{display: block;transition: 0.5s;margin-top: 0;}
+        #gnb3 a:hover .en{margin-top: -40px;} 
+        #gnb3 a:hover .ko{color: #c80012;}
+        
+        #gnb4 .menuFrame{width: 480px;border-bottom: 2px solid #333;height: 40px;position: relative;}
+        #gnb4 li{padding: 10px;width: 100px;}
+        #gnb4 li:after{content: "";display: block;width: 120px;height: 8px;background-color: transparent;position: absolute;left: 0;/*bottom: -5px;*/top: 77px;transition: 0.5s;}
+        #gnb4 li:hover:after{background-color: #c80034;}
+        #gnb4 li.item1:hover:after{left: 20px;}
+        #gnb4 li.item2:hover:after{left: 140px;}
+        #gnb4 li.item3:hover:after{left: 260px;}
+        #gnb4 li.item4:hover:after{left: 380px;}
+        
+        #gnb5 .menuFrame{width: 480px;height: 40px;position: relative;}
+        #gnb5 li{padding: 10px;}
+        #gnb5 a:after{content: "";display: none;width: 0px;height: 0;border-top: 10px solid #fff;border-right:10px solid #fff;border-bottom:10px solid #333;border-left:10px solid #fff; margin: 0 auto;margin-top: -15px;}
+        #gnb5 a:hover:after{display: block;}
+    </style>
+</head>
+<body>
+    <h2 class="title">메뉴위젯</h2>
+    <!--nav#gnb1.menu>ul.menuFrame>li*4>a-->
+    <nav id="gnb1" class="menu">
+        <ul class="menuFrame">
+            <li><a href="">회사소개</a></li>
+            <li><a href="">제품소개</a></li>
+            <li><a href="">서비스소개</a></li>
+            <li><a href="">커뮤니티</a></li>
+        </ul>
+    </nav>
+    
+    <nav id="gnb2" class="menu">
+        <ul class="menuFrame">
+            <li><a href="">회사소개</a></li>
+            <li><a href="">제품소개</a></li>
+            <li><a href="">서비스소개</a></li>
+            <li><a href="">커뮤니티</a></li>
+        </ul>
+    </nav>
+    
+    <nav id="gnb3" class="menu">
+        <ul class="menuFrame">
+            <li>
+                <a href="">
+                <!--span.*2-->
+                    <span class="en">COMPANY</span>
+                    <span class="ko">회사소개</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span class="en">PRODUCT</span>
+                    <span class="ko">제품소개</span>
+                </a>
+            </li>
+            <li>
+            <a href="">
+               <span class="en">SERVICE</span>
+               <span class="ko">서비스소개</span>
+            </a>
+            </li>
+            <li>
+                <a href="">
+                <span class="en">COMMUNITY</span>
+               <span class="ko">커뮤니티</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+    <nav id="gnb4" class="menu">
+        <ul class="menuFrame">
+            <li class="item1"><a href="">회사소개</a></li>
+            <li class="item2"><a href="">제품소개</a></li>
+            <li class="item3"><a href="">서비스소개</a></li>
+            <li class="item4"><a href="">커뮤니티</a></li>
+        </ul>
+    </nav>
+    
+    <nav id="gnb5" class="menu">
+        <ul class="menuFrame">
+            <li class="item1"><a href="">회사소개</a></li>
+            <li class="item2"><a href="">제품소개</a></li>
+            <li class="item3"><a href="">서비스소개</a></li>
+            <li class="item4"><a href="">커뮤니티</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

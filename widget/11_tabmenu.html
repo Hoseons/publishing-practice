@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭위젯</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul,li{list-style: none;}
+        a{text-decoration: none;}
+        button, label{
+            outline: none;
+            border: 0;
+        }
+
+        /* 기본영역 */
+        .title{
+            line-height: 1.8;
+            text-indent: 25px;
+            margin-top: 25px;
+        }
+        .title::after{
+            content: " ";
+            border-bottom: 2px solid #333;
+            display: block;
+        }
+        /* 탭 공통 클라스 */
+        input[name='radio']{
+            display: none;
+        }
+        .tab{
+            width: 900px;
+            height: 500px;
+            padding-top: 20px;
+            margin: 20px auto;
+        }
+        .tabBox{
+            width: 900px;
+            height: 40px;
+
+        }
+        .tabBox label{
+           width: 100px;
+           height: 40px;
+           display: block;
+           background: #999;
+           float: left;
+           text-align: center;
+           line-height: 40px;
+           color: #fff;
+           cursor: pointer;
+            border-top: 1px solid #333;
+            border-left: 1px solid #333;
+            border-bottom: 1px solid #333;
+        }
+        .tabBox label:nth-child(3){
+            border-right: 1px solid #333;
+        }
+        .conBox{
+            clear: both;
+            width: 900px;
+        }
+        .tb{
+            display: none;
+            border: 1px solid #333;
+            width: 900px;
+            box-sizing: border-box;
+        }
+        .tbTit{
+            clear: both;
+            line-height: 100px;
+            padding-left: 25px;
+            
+        }
+        .tbCom{
+            clear: both;
+            line-height: 1.6;/* 본문 1.2~1.6 */
+            padding: 25px;
+            text-align: justify;
+        }
+        #ra1:checked ~ .tabBox .item1{
+            background: #004892;
+        }
+        #ra2:checked ~ .tabBox .item2{
+            background: #004892;
+        }
+        #ra3:checked ~ .tabBox .item3{
+            background: #004892;
+        }
+        #ra1:checked ~.conBox #tb1{
+            display: block;
+        }
+        #ra2:checked ~.conBox #tb2{
+            display: block;
+        }
+        #ra3:checked ~.conBox #tb3{
+            display: block;
+        }
+
+
+        /* 두번째 탭위젯 */
+        input[name="rao1"]{
+            display: none;
+        }
+
+        #tab2{
+            position: relative;
+            height: 700px;
+            z-index: 10;
+        }
+
+        .tb1{/* li */
+            float: left;
+        }
+        .tb1 .btn{/* 탭제목 */
+            display: block;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: #333;  
+            border-top: 1px solid #333;
+            border-left: 1px solid #333;
+            border-bottom: 1px solid #333;
+            border-radius: 10px 10px 0 0;
+            cursor: pointer;
+        }
+        .tb1:nth-child(3) .btn{
+            border-right: 1px solid #333;
+        }
+/* 
+        #ra21:checked ~ .tbo{
+           display: block;
+        }
+        #ra22:checked ~ .tbo{
+           display: block;
+        }
+        #ra23:checked ~ .tbo{
+           display: block;
+        } */
+
+        .tbo{
+            position: absolute;
+            top: 61px;
+            left: 0;
+            z-index: 2;
+            border: 1px solid #333;
+            width: 898px;
+            display: none;
+        }
+
+        .raItem:checked~ .tbo{
+            display: block;
+        }
+
+        .raItem:checked~ .btn{
+            border-bottom: 1px solid transparent;
+        }
+        .raItem:checked~ .btn::after{
+            content: " ";
+            display: block;
+            width: 121px;
+            height: 2px;
+            border-top: 2px solid #fff;
+            position: absolute;
+            top: 61px;
+            z-index: 4;
+            
+        }
+    </style>
+</head>
+<body>
+    <h2 class="title">탭위젯</h2>
+    <div class="tab" id="tab1">
+        <!-- div.tabBox>label.item$*3
+        div.conBox>div.tb#tb$*3 -->
+        <input type="radio" id="ra1" name="radio" checked>
+        <input type="radio" id="ra2" name="radio">
+        <input type="radio" id="ra3" name="radio">
+        <div class="tabBox">
+            <label for="ra1" class="item1">탭1</label>
+            <label for="ra2" class="item2">탭2</label>
+            <label for="ra3" class="item3">탭3</label>
+        </div>
+        <div class="conBox">
+            <div class="tb" id="tb1">
+                <h3 class="tbTit">1.탭제목</h3>
+                <p class="tbCom">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel dignissimos ab maiores. Exercitationem neque ex adipisci, qui quam odio doloribus omnis officia cumque vero voluptatem sint ipsum, deserunt mollitia ea.
+                </p>
+            </div>
+            <div class="tb" id="tb2">
+                <h3 class="tbTit">2.탭제목</h3>
+                <p class="tbCom">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel dignissimos ab maiores. Exercitationem neque ex adipisci, qui quam odio doloribus omnis officia cumque vero voluptatem sint ipsum, deserunt mollitia ea.
+                </p>
+            </div>
+            <div class="tb" id="tb3">
+                <h3 class="tbTit">3.탭제목</h3>
+                <p class="tbCom">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel dignissimos ab maiores. Exercitationem neque ex adipisci, qui quam odio doloribus omnis officia cumque vero voluptatem sint ipsum, deserunt mollitia ea.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="tab2" class="tab">
+        <ul class="conBox">
+            <li class="tb1">
+                <input type="radio" name="rao1" class="raItem" id="ra21" checked>
+                <label for="ra21" class="btn">탭1</label>
+                <div class="tbo" id="tb01">
+                    <h2 class="tbTit">탭1 제목</h2>
+                    <p class="tbCom">
+                        11111111111111Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus debitis modi perspiciatis aliquam deserunt numquam vel optio impedit qui, quasi consectetur cumque sequi totam dolorum exercitationem asperiores, corrupti corporis voluptas.
+                    </p>
+                </div>
+            </li>
+            <li class="tb1">
+                <input type="radio" name="rao1" class="raItem" id="ra22">
+                <label for="ra22" class="btn">탭2</label>
+                <div class="tbo" id="tb01">
+                    <h2 class="tbTit">탭2 제목</h2>
+                    <p class="tbCom">
+                        22222222222222Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus debitis modi perspiciatis aliquam deserunt numquam vel optio impedit qui, quasi consectetur cumque sequi totam dolorum exercitationem asperiores, corrupti corporis voluptas.
+                    </p>
+                </div>
+            </li>
+            <li class="tb1">
+                <input type="radio" name="rao1" class="raItem" id="ra23">
+                <label for="ra23" class="btn">탭3</label>
+                <div class="tbo" id="tb01">
+                    <h2 class="tbTit">탭3 제목</h2>
+                    <p class="tbCom">
+                        33333333333333333Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus debitis modi perspiciatis aliquam deserunt numquam vel optio impedit qui, quasi consectetur cumque sequi totam dolorum exercitationem asperiores, corrupti corporis voluptas.
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
