@@ -24,7 +24,7 @@ header::before{/* 서브메뉴 뒷배경 */
   right: 0;
   top: 3.95rem;
   height: 0;
-  background: rgba(0,0,0,0.92);
+  background: rgba(0,0,0,0.5);
    transition: 0.3s;
 }
 header.on:hover::before{/* 제이쿼리에서 .on 활용 */
@@ -50,7 +50,6 @@ nav > ul > li{
 position: relative;
 width: 25%;
 text-align: center;
-border: 1px solid #f00;
 }
 nav > ul > li > a{
 display: block;
@@ -85,8 +84,9 @@ nav > ul > li:hover > a:before{
   top: 3.95rem;
   width: 100%;
   text-align: center;
+  padding-top: 1rem;
   height: 9rem;/* 180px */
-  /* display: none; */
+  display: none;
 }
 nav > ul > li:hover .inner{
 background: rgba(18,20,23,1);
@@ -111,4 +111,416 @@ text-indent: 0.75rem;
 color: #fff;
 font-size: 0.8rem;/* 16px */
 line-height: 3.95rem;
+transition: .5s;
+}
+header .reserve:hover{
+background-position: 0 0;
+}
+
+/* 비디오 영역 */
+.sec1{
+  min-height: 32.5rem;/* 650px*/
+height: 100vh;
+position: relative;
+}
+.video_wrap{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  min-height: 32.5rem;
+  height: 100vh;
+  overflow: hidden;
+}
+.main_text{
+  position: absolute;
+  border: 1px solid  #F00  ;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+}
+.main_text span, .main_text strong{
+  display: block;
+  color: #fff;
+}
+.main_text span{
+  font-size: 1.5rem;
+}
+.main_text strong{
+  font-size: 2.9rem;
+  margin-top: 1rem;
+  white-space: nowrap;
+}
+.main_text a{
+  display: inline-block;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 1.1rem;
+  margin-top: 1.3rem;
+  padding: 0.85rem 2.7rem;
+  font-weight: bold;
+  position: relative;
+  transition: .4s;
+  transition-delay: 0.2s;
+  overflow: hidden;
+}
+.main_text a:before{
+  content: "";
+  position: absolute;
+  left: -175%;
+  top: -1rem;
+  z-index: -1;
+  width: 160%;
+  height: 200%;
+  background: #fff;
+  transform: skewX(-30deg);
+  transition: 0.6s;
+}
+.main_text a:hover::before{
+  left: -2rem;
+}
+.main_text a:hover{
+  color: #0f7258;
+}
+.main_text a i{
+  display: inline-block;
+  width: 1.45rem;
+  height: 0.55rem;
+  background: url(../images/more_arrow.png) no-repeat -29px 0;
+  position: relative;
+  top: -4px;
+  margin-left: 0.5rem;
+  transition: .4s;
+  transition-delay: .2s;
+}
+.main_text a:hover i{
+  background-position: 0 0;
+}
+
+/* 아이콘 영역 */
+.icon{
+  position: absolute;
+  width: 1200px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.icon ul{
+display: flex;
+background: rgba(0,0,0,.5);
+}
+.icon ul li{
+  flex: 1;
+  text-align: center;
+}
+.icon ul li a{
+  display: block;
+  color: #fff;
+  padding: 2rem 0;
+  transition: .4s;
+  position: relative;
+
+}
+.icon ul li a:before,.icon ul li a:after{
+  content: "";
+  width: 45%;
+  height: 3px;
+  background: #0f7258;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: .4s;
+}
+.icon ul li a:before{
+  top: 0;
+}
+.icon ul li a:after{
+  bottom: 0;
+}
+.icon ul li a:hover:before,
+.icon ul li a:hover:after{
+  opacity: 1;
+}
+.icon ul li a span{
+  display: block;
+  width: 50px;
+  height: 44px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  transition: 0.4s;
+  border:1px solid #f00;
+}
+.icon ul li a span.icon1{
+  background-image: url(../images/quick_icon01.png);
+}
+.icon ul li a span.icon2{
+  background-image: url(../images/quick_icon02.png);
+}
+.icon ul li a span.icon3{
+  background-image: url(../images/quick_icon03.png);
+}
+.icon ul li a span.icon4{
+  background-image: url(../images/quick_icon04.png);
+}
+.icon ul li a span.icon5{
+  background-image: url(../images/quick_icon05.png);
+}
+.icon ul li a span.icon6{
+  background-image: url(../images/quick_icon06.png);}
+  .icon ul li a:hover{
+    background: #fff;
+    color: #0f7258;
+  }
+  .icon ul li a:hover span{
+    background-position: -50px 0;
+  }
+.icon ul li a h3{
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+/* our service */
+.sec2{padding-top: 6rem;}
+.sec2 .title{
+  position: relative;
+  top: 40px;
+    opacity: 0;
+    transition: 0.6s;
+}
+.sec2 .title.on{
+opacity: 1;
+top: 0;
+}
+.sec2 .subTitle{
+  position: relative;
+  top: 40px;
+  opacity: 0;
+  transition: 0.6s;
+  transition-delay: 0.1s;
+}
+.sec2 .subTitle.on{
+  opacity: 1;
+top: 0;
+}
+
+.service{
+  width: 1200px;
+  margin: 50px auto 0;
+  position: relative;
+  top: 40px;
+  opacity: 0;
+  transition: 0.6s;
+  transition-delay: 0.2s;
+}
+.service.on{
+  top: 0;
+  opacity: 1;
+}
+.service ul{
+  border: 1px solid #f00;
+  display: flex;
+  justify-content: space-between;
+}
+.service ul li{
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.08);
+}
+.service ul li a{
+  display: block;
+  position: relative;
+  background: #0f7258;
+  overflow: hidden;
+}
+.service ul li a .ser_text{
+  position: absolute;
+  left: 0;bottom: 0;right: 0;
+  z-index: 10;  
+  color: #fff;
+padding: 1.5rem 0 1.5rem 1.5rem;
+}
+.service ul li a .ser_text strong{
+  font-size: 1.3rem;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 10px;
+} 
+.service ul li a .ser_text p{
+  line-height: 1.5;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #bcbcbc;  
+}
+.service ul li a:hover img{
+  opacity:0.8;
+}
+.service ul li a .ser_text:before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: -100%;
+  bottom: 0;
+  z-index: -1;
+  background: url(../images/ser_textbg.png) no-repeat 100% 100% / cover;
+  transition: .5s;
+}
+.service ul li a:hover .ser_text:before{
+  left: 0;
+}
+/* expert & technique */
+.sec3{
+  padding-top: 8rem;
+  position: relative;
+}
+.sec3:before{
+content: '';
+position: absolute;
+right: 0;
+top: 0;
+z-index: -1;
+width: 0%;
+height: 2200px;
+background: url(../images/expert_bg.png) no-repeat 100% 0 / cover;
+transition: 2s;
+}
+.sec3.on:before{
+  width: 100%;
+}
+.sec3_inner{
+  width: 1200px;
+  margin: 0 auto;
+  border: 1px solid #f00;
+}
+.sec3 .title{
+  text-align: left;
+  position: relative;
+  top: 20px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.sec3 .subTitle{
+  text-align: left;
+  position: relative;
+  top: 20px;
+  opacity: 0;
+  transition: 0.5s;
+  transition-delay: 0.2s;
+}
+.sec3 .expert{
+margin-top: 2rem;
+display: flex;
+justify-content: space-between;
+position: relative;
+top: 20px;
+opacity: 0;
+transition: 0.5s;
+transition-delay: 0.4s;
+}
+.sec3 .title.on, 
+.sec3 .subTitle.on, 
+.sec3 .expert.on{
+  opacity: 1;
+  top: 0;
+}
+
+.sec3 .expert li{
+  width: 48%;
+  background: #fc0;
+}
+.sec3 .expert li a{
+  display: block;
+  box-shadow: 10px 10px 10px rgba(0,0,0,.08);
+  position: relative;
+  overflow: hidden;
+}
+.sec3 .expert li a img{
+  width: 100%;
+  transition: .5s;
+}
+.sec3 .expert li a .text{
+  position: absolute;
+  left: 0;right: 0;bottom: 0;
+  background: rgba(33,33,33,0.3);
+  color: #fff;
+  padding: 1.5rem 0 1.5rem 2.2rem;
+  transition: 0.3s;
+}
+.sec3 .expert li a .text:before{/* 수직선 */
+content: '';
+position: absolute;
+left: 1.1rem;
+top: 0;
+width: 3px;
+height: 80%;
+background: #fff;
+}
+.sec3 .expert li a .text span{
+font-size: 0.9rem;
+display: block;
+font-weight: 300;
+margin-bottom: 10px;
+}
+.sec3 .expert li a .text strong{
+font-size: 1.2rem;
+font-weight: 400;
+}
+.sec3 .expert li a:hover img{
+  transform: scale(1.1);
+}
+.sec3 .expert li a:hover .text{
+  background: rgba(15, 114, 88,0.7);
+}
+
+.homeCheck{
+display: flex;
+margin-top: 2rem;
+}
+.homeCheck .text{
+  width: 40%;
+  align-self: flex-end;/* 세로 맨 밑 */
+}
+.homeCheck .text  .homeCheck_title{
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  position: relative;
+}
+.homeCheck .text  .homeCheck_title:after{/* 수평선 */
+  content: '';
+  position: absolute;
+  width: 110%;height: 1px;
+  left: -1rem;
+  bottom: -1.5rem;
+  background: #fff;
+  z-index: 2;
+}
+.homeCheck .text p{
+color: #b6e7da;
+line-height: 2;
+font-size: 1rem;
+font-weight: 300;
+}
+.homeCheck .img{
+  width: 60%;
+  position: relative;
+  box-shadow: 10x 10px 1px rgba(0,0,0,.08);
+}
+.homeCheck .img img{
+  width: 100%;
+}
+.homeCheck .img .play_btn{
+  width:5rem;
+    height:5rem;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    cursor:pointer;
+    background:url(../images/video_play.png) no-repeat 50% 50% / 100%;
 }
