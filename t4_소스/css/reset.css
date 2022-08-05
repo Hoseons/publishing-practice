@@ -1,0 +1,12 @@
+@charset "utf-8";
+* { margin: 0; padding: 0; }
+body, html { width: 100%; font-family:"Dotum", "돋움", sans-serif; background:#f2f2f2; color:#333333; }
+ul { list-style: none; }
+a { text-decoration: none; }
+button, input, label, select { outline:0; border:0; background-color:transparent; }
+table { display:table; }
+tr { display:table-row; }
+th { display:table-cell; }
+td { display:table-cell; }
+thead { display:table-header-group; }
+tfoot { display:table-footer-group; }

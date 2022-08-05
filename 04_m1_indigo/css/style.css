@@ -1,0 +1,363 @@
+@charset "utf-8";
+
+header{
+    background: #fff;
+    box-shadow: 0 5px 7px rgba(15, 21, 58, .24);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;z-index: 100;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header .logo a{
+    font-size: 30px;
+    font-weight: 500;
+    color: #3f51b5;
+}
+
+header nav ul{
+    display: flex;
+}
+header nav ul li~li{
+    margin-left: 65px;
+}
+header nav ul li a{
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #3f51b5;
+}
+header .menu{
+    display: none;
+}
+.visual{
+    width: 100%;
+    height: 540px;
+    margin-top: 70px;
+    background: url(../images/p-images/slide01.jpg) no-repeat 50% / cover;
+    text-indent: -9999px;
+}
+
+.weAre{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 120px 0;
+}
+
+.weAre .text{
+    width: 70%;
+    color: #262626;
+    font-weight: 300;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+.weAre ul{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 50px;
+}
+.weAre ul li{
+    text-align: center;
+   
+    width: 25%
+}
+.weAre ul li span{
+    display: flex;
+    height: 90px;
+    align-items: center;
+    flex: 1;
+    justify-content: center ;
+}
+.weAre ul li span img{
+    width: 60px;
+
+}
+.weAre ul li strong{
+    display: block;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    color: #3f51b5;
+    font-weight: 0;
+    font-size: 18px;
+}
+.weAre ul li p{
+    font-size: 12px;
+    line-height: 1.6;
+    width: 90%;
+    margin: 0 auto;
+/* 
+    text-align: justify;
+    padding: 0 12px; */
+}
+
+.work .img_list{
+    margin: 50px 0 120px;
+}
+.work .img_list ul{
+    display: flex;
+    flex-wrap: wrap;
+    /* pc는 최대 7까지 */
+}
+.work .img_list ul li{
+    width: 25%;
+    position: relative;
+}
+.work .img_list ul li a{
+    display: block;
+}
+.work .img_list ul li a img{
+    width: 100%;
+}
+.work .img_list ul li a .text{
+    position: absolute;
+    /* width: calc(100% - 20px); */
+    left: 0;right: 0;top: 0;bottom: 0;
+    background: rgba(22, 38, 132, .8);
+    color: #fff;
+    padding-left: 20px;
+    opacity: 0;
+    transition: .5s;
+}
+.work .img_list ul li a .text strong{
+   display: block;
+   font-size: 20px;
+   font-weight: 500;
+   margin-bottom: 12px;
+   transition: .3s;
+}
+.work .img_list ul li a .text span{
+    font-size: 16px;
+    font-weight: 300;
+}
+.work .img_list ul li:hover a .text{
+    opacity: 1;
+}
+
+.work .img_list ul li:hover a .text strong{
+    margin-top: 20px;
+}
+
+.blog{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+.blog .blog_list{
+    width: 70%;
+}
+
+.blog .blog_list ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.blog .blog_list ul li{
+    width: 32%;
+}
+
+.blog .blog_list ul li img{
+    width: 100%;
+}
+.blog .blog_list ul li strong{
+   display: block;
+   font-size: 20px;
+   font-weight: 500;
+   color: #262626;
+   margin: 20px 0;
+}
+
+.blog .blog_list ul li p{
+    line-height: 1.4;
+    font-size: 15px;
+    font-weight: 300;
+    color: #696969;
+ }
+
+ .contact{
+    display: flex;
+ }
+ .contact .form{
+    width: 70%;
+ }
+ .contact .form fieldset{
+    display: flex;
+    justify-content: space-between;
+ }
+ .contact .form fieldset>div{
+    width: 49%;
+    /* border: 1px solid #f00; */
+ }
+
+ .contact .form fieldset div input,
+ .contact .form fieldset div textarea{
+    border: none;
+    border-bottom: 1px solid #3f51b5;
+    outline: none;
+    width: 100%;
+    padding-bottom: 10px;
+ }
+
+ .contact .form fieldset div input ~input{
+    margin-top: 30px;
+ }
+ .contact .form fieldset div textarea{
+    height: 132px;
+ }
+
+ .contact .form fieldset .right{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+ }
+
+ .contact .form fieldset div button{
+    font-size: 16px;
+    border: 0;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 20px;
+    padding: 15px 20px;
+    cursor: pointer;
+    background: #3f51b5;
+    font-weight: 500;
+ }
+
+ .map{
+    margin: 120px auto 0;
+ }
+ .map iframe{
+    width: 100%;
+    height: 480px;
+    border: 1px solid #ccc;
+ }
+ footer{
+    padding: 30px 0;
+    font-size: 20px;
+    color: #3f51b5;
+    text-align: center;
+ }
+ @media screen and (max-width:1024px) {
+    header nav{
+        display: none;
+    }
+    header .menu{
+        display: block;
+        width: 36px;
+        height: 36px;
+        border-radius: 1.5px;
+        cursor: pointer;
+        border: 1px solid #f00;
+        position: relative;
+    }
+    header .menu span{
+        display: block;
+        width: 36px;
+        height: 3px;
+        background: #3f51b5;
+        text-indent: -9999px;
+        border-radius: 1.5px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    header .menu span::before{
+        content: "";
+        display: block;
+        width: 36px;
+        height: 3px;
+        background: #3f51b5;
+        border-radius: 1.5px;
+        position: absolute;
+        left: 0;
+        top: -10px;
+    }
+    header .menu span::after{
+        content: "";
+        display: block;
+        width: 36px;
+        height: 3px;
+        background: #3f51b5;
+        border-radius: 1.5px;
+        position: absolute;
+        left: 0;
+        top: 10px;
+    }
+    .title{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 45px;
+    }
+    .title span::after{
+        left: 50%;
+        top: -20px;
+        transform: translateX(-50px);
+    }
+    .weAre .text{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .weAre ul li{
+
+        width: 50%;
+    }
+    .weAre ul li:nth-child(2)~li{
+       margin-top: 50px;
+    }
+    .blog .blog_list{
+        width: 100%;
+    }
+    .contact .form{
+        width: 100%;
+    }
+ }
+ @media screen and (max-width:768px) {
+    .fixed{
+        width: 90%;
+    }
+    .visual{
+        height: 380px;
+    }
+    .work .img_list ul li{
+        width: 50%;
+    }
+    .work .img_list ul li:nth-child(2)~li{
+        margin-top: 60px;
+    }
+    .contact {
+        flex-direction: column;
+    }
+    .contact .form fieldset{
+        flex-direction: column;
+    }
+    .contact .form fieldset > div{
+        width: 100%;
+    }
+    .contact .form fieldset .right{
+        margin-top: 30px;
+        justify-content: center;
+    }
+
+}
+@media screen and (max-width:480px) {
+    .weAre ul li{
+        width: 100%;
+    }
+    .weAre ul li~li{
+       margin-top: 50px;
+    }
+    .work .img_list ul li{
+        width: 100%;
+    }
+    .map iframe{
+        height: 380px;
+    }
+}

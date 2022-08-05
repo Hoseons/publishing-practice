@@ -1,0 +1,33 @@
+    <!-- 아이폰 계열의 웹앱 설정 -->
+    <meta name="apple-mobile-web-app-title" content="홈체크">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 공통 웹앱 검색엔진의 검색 결과 설정-->
+    <meta name="description" content="KCSI 2년 연속1위, 누적점검세대 20,000세대, 벤처 ISO 9001인증, 2년 연속 정부지원사업선정, 아파트 사전점검 대행 업체 홈체크">
+  <meta name="keyword" content="아파트 사전점검, 아파트 사전점검 대행, 사전점검 대행, 홈체크, 사전점검 업체">
+    <!-- SNS에 의한 검색결과 설정 -->
+    <meta itemprop="name" content="김앤장 법률사무소">
+    <meta itemprop="description" content="KCSI 2년 연속1위, 누적점검세대 20,000세대, 벤처 ISO 9001인증, 2년 연속 정부지원사업선정, 아파트 사전점검 대행 업체 홈체크">
+
+    <!-- 페이스북 연동 설정 -->
+    <meta property="fb:app_id" content="APP_ID">
+    <!-- 페이스북, 트위터, 카카오톡의 크롤러 연동 설정 -->
+    <meta property="og:type" content="website">
+  <meta property="og:title" content="홈체크ㅣ아파트 사전점검 대행 업체ㅣ새아파트, 주택 점검, 주택 관리 전문">
+  <meta property="og:description" content="KCSI 2년 연속1위, 누적점검세대 20,000세대, 벤처 ISO 9001인증, 2년 연속 정부지원사업선정, 아파트 사전점검 대행 업체 홈체크">
+  <meta property="og:keyword" content="아파트 사전점검, 아파트 사전점검 대행, 사전점검 대행, 홈체크, 사전점검 업체">
+  <meta property="og:image" content="favicon/homecheck.png">
+  <meta property="og:url" content="http://본인아이디.dothome.co.kr/homeCheck">
+
+    <!-- 메타포 아이콘 설정 -->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">

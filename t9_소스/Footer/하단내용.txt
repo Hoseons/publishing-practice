@@ -1,0 +1,14 @@
+하단 메뉴
+	개인정보처리방침 | 이메일무단수집거부 | 전국세계7대빛축제 | 오시는길 | 축제참여하기
+
+
+패밀리사이트
+	선택안함
+	해운대구청(http://www.haeundae.go.kr)
+	부산광역시청(https://www.busan.go.kr)
+	문화체육관광부(https://www.mcst.go.kr)
+	중소기업중앙회(https://www.kbiz.or.kr)
+	중소벤처기업부(https://www.mss.go.kr)
+	한국전통식품협회(http://www.koreaslowfood.com)
+
+※ 해당 패밀리사이트를 선택하면 지정한 링크로 현재 창에 열리도록 할 것.
