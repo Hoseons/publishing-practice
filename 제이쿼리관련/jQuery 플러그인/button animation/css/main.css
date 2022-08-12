@@ -1,0 +1,17 @@
+html{font-family: "나눔고딕"; font-size: 16px; line-height: 1.5;}
+body{background-color: #656565;}
+img{vertical-align: middle;}
+button{border: 0;}
+
+#buttons1{background-color: #eba000; width: 100%; height: 400px;}
+#buttons1 h2{text-align: center; padding-top: 20px;}
+#buttons1 button{display: block; width: 224px; height: 80px;
+    float: left; margin: 0 10px 20px; padding: 0; font-size: 16px; color: #eba000;
+    background-color: #fff; border: none; border-radius: 20px;}
+#buttons1 .inner{width: 976px; margin: 0 auto;}
+#buttons1 button{border: 0px solid #ae5e9b;}
+#buttons1 button{position: relative;}
+#buttons1 button .bg{position: absolute; top: 0; left: 0; width: 0%; height: 100%;
+    overflow: hidden;}
+#buttons1 button span span{display: block; width: 224px; height: 80px; line-height: 80px;
+    color: #fff; background-color: #ae5e9b; border-radius: 20px;}

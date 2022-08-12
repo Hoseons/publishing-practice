@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	
+   *{margin: 0; }
+  #box { width: 100%; height: auto; overflow:hidden; border:1px solid #fcc;display:block;}
+   li{list-style: none;}
+   img{display: block; min-width:100%; min-height: auto;}
+   .slider li{position: absolute; left: 0; top: 0; }
+
+</style>
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/jquery-ui-1.12.0.custom.min.js"></script>
+<!-- jQuery library (served from Google) -->
+<script src="js/jquery.bxslider.min.js"></script>
+<!-- bxSlider Javascript file -->
+
+
+<script >
+// http://bxslider.com/options / options: 'horizontal', 'vertical', 'fade' --모드에 변경해서 쓰면 옵션이 변경됨 / 가로 / 세로 / 점점사라짐
+$(document).ready(function(){
+  $('.slider').bxSlider({
+  	mode:"horizontal",
+  	auto:"true"
+  });
+});
+
+</script>
+
+
+
+
+
+</head>
+<body>
+	
+    <div id="box" >
+		<ul class="slider">
+	     <li><img src="img/img1.jpg" alt=""></li>
+	    <li><img src="img/img2.jpg" alt=""></li>
+	    <li><img src="img/img3.jpg" alt=""></li>
+    </ul>
+    </div>
+
+</body>
+</html>

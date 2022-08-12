@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+/*
+ * Slideshow
+ */
+.slideshow {
+    overflow: hidden;
+    position: relative;
+    min-width: 960px;
+    /*유동적인 상황을 여러개 연출해야할 때 최소 넓이(가로)값을
+    유지하고자 할 때 사용함.(영역의 최소값)
+    최소값을 정해준 후 그보다 크면 자동으로 늘어나고, 그보다 작아도 더 
+    줄어들지 않도록 하기 위해 사용*/
+    height: 465px;
+}
+.slideshow img {
+    display: none;
+    position: absolute;
+    left: 50%;
+    margin-left: -800px;
+}
