@@ -1,0 +1,22 @@
+@charset "utf-8";
+@font-face {
+    font-family:"aqs";
+    src:local("aqs"), url("./fonts/aqs.eot#iefix"),
+     url("./fonts/aqs.ttf") format("truetype"), 
+     url("./fonts/aqs.otf") format("opentype"), 
+     url("./fonts/aqs.woff") format("woff");
+}
+@font-face {
+    font-family:"NotoSansKR-Black";
+    src:local("NotoSansKR-Black"), url("./fonts/NotoSansKR-Black.eot#iefix"),
+     url("./fonts/NotoSansKR-Black.ttf") format("truetype"), 
+     url("./fonts/NotoSansKR-Black.otf") format("opentype"), 
+     url("./fonts/NotoSansKR-Black.woff") format("woff");
+}
+@font-face {
+    font-family:"NotoSansKR-Bold";
+    src:local("NotoSansKR-Bold"), url("./fonts/NotoSansKR-Bold.eot#iefix"),
+     url("./fonts/NotoSansKR-Bold.ttf") format("truetype"), 
+     url("./fonts/NotoSansKR-Bold.otf") format("opentype"), 
+     url("./fonts/NotoSansKR-Bold.woff") format("woff");
+}

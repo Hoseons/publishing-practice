@@ -1,0 +1,30 @@
+<script>
+        $(document).ready(function(){
+            $(".lst_btn").click(function(){
+                $(".lst_box").addClass("on");
+            });
+            $(".lst_box .close").click(function(){
+                $(".lst_box").removeClass("on");
+            });
+            $(".sns").click(function(){
+                $(".sns_box").addClass("on");
+            });
+            $(".sns_box .close").click(function(){
+                $(".sns_box").removeClass("on");
+            });
+            $(".ev").click(function(){
+                $(".event_box").addClass("on");
+            });
+            $(".event_box .close").click(function(){
+                $(".event_box").removeClass("on");
+            });
+            $(".log").click(function(){
+                $(".log_box").addClass("on");
+            });
+            $(".log_box .close").click(function(){
+                $(".log_box").removeClass("on");
+            });
+            
+        });
+    
+    </script>

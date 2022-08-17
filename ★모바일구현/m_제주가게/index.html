@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>트립 제주</title>
+    <!-- 인터넷 익스플로러용 타일 아이콘 144x144 -->
+    <meta name="msapplication-TileColor" content="#FFFFFF"> 						
+    <meta name="msapplication-TileImage" content="./ico/favicon_144x144.png">
+    <!-- 모바일 웹앱 문서정보에 대한 설정 -->
+    <meta name="title" content="제주여행 웹사이트">
+    <meta name="auther" content="홍길동">
+    <meta name="url" content="http://아이디.dothome.co.kr/m2/index.html">
+    <meta name="description" content="제주 여행 맛집,볼거리,숙박 정보">
+    <meta name="keywords" content="제주여행,제주공항, 제주 해수욕장, 제주맛집,제주 숙박, 제주펜션">
+    <!-- 애플 어플 문서 정보 설정 -->
+    <meta name="apple-mobile-web-app-title" content="제주여행 사이트">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 소셜에 문서정보 노출 설정 -->
+    <meta itemprop="name" content="트립제주">
+    <meta itemprop="description" content="제주 여행 맛집,볼거리,숙박 정보">
+    <meta itemprop="image" content="./ico/favicon_256x256.png" >
+    <!-- 페이스북에 노출 설정 -->
+    <meta property="fb:app_id" content="APP_ID">
+    <!-- 카카오톡, 블로그 등의 크롤링으로 화면 미리보기 노출 -->
+    <meta property="og:type" content="Website">
+    <meta property="og:title" content="제주여행">
+    <meta property="og:url" content="http://아이디.dothome.co.kr/m2/index.html">
+    <meta property="og:description" content="제주여행, 숙박,먹거리,볼거리">
+    <meta property="og:img" content="http://아이디.dothome.co.kr/m2/data/vs1.png">
+   
+   <!-- 파비콘 및 메타포 아이콘 적용 -->
+    <!-- 가장 작은 형태EX12.의 16x16 크기의 ico -->
+    <link rel="shortcut icon" href="./ico/favicon.ico">
+    <!-- 가장 작은 형태의 16x16 크기의 png -->
+    <link rel="shortcut icon" href="./ico/favicon16x16.png" type="image/x-icon">
+    <!-- 일반 앱형태의 아이콘 설정 -->
+    <link rel="icon" href="./ico/favicon.ico">
+    <link rel="icon" href="./ico/favicon_16x16.png" sizes="16x16"> 
+    <link rel="icon" href="./ico/favicon_32x32.png" sizes="32x32"> 
+    <link rel="icon" href="./ico/favicon_48x48.png" sizes="48x48"> 
+    <link rel="icon" href="./ico/favicon_64x64.png" sizes="64x64"> 
+    <link rel="icon" href="./ico/favicon_128x128.png" sizes="128x128">
+    <!-- 아이폰 고해상도용 파비콘 152x152 -->
+    <link rel="apple-touch-icon-precomposed" href="./ico/favicon_152.png">
+    
+     <!--상대경로. 부트스트랩파일 가지고 있을 경우  
+   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <script src="jquery.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>-->
+   <!-- 제이쿼리 파일 CDN 형식으로 연결-->
+   <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+   <!-- 부트스트랩 CDN 방식 -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+   
+  <!-- 폰트 어썸-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css" >
+ <!--  xe-icon CDN-->
+   <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+   
+   <link rel="stylesheet" href="font.css">
+  <!--구글폰트 링크 CDN -->
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="normalize.css">
+  <style>
+    body,html{height: 100%;font-family: 'Noto Sans KR', sans-serif;}
+        
+    /*헤더영역*/
+      .hd{width: 100%;height: 60px;background: #6955ce;border-bottom: 1px solid #eee;position: fixed;left: 0;top: 0;}
+      .hd button{position: absolute;top: 1em;z-index: 91;display: block;cursor: pointer;}
+      .hd button i{font-size: 1.8em;color: #fff;}
+      .lst_btn{left: 1em;}
+      .sns{right: 5em;}
+      .ev{right: 3em;}
+      .log{right: 1em;}
+      .logo{display: block;width: 100px;height: 34px;background-image: url(data/logo_beta.png);background-size: 100%;background-repeat: no-repeat;/*background-position: center center;*/margin: 0.5em auto;}
+      
+      .lst_box, .sns_box, .event_box, .log_box{width: 100%;height: 100%;position: fixed;z-index: 999;overflow: hidden;transition: 0.5s;}
+      /*헤더 버튼 클릭시 박스 위치 */
+      .lst_box{left: -110%;top: 0;background: rgba(0,0,0,0.6);}
+      .lst_box.on{left: 0;}
+      .sns_box{right: -110%;top: 0;background: rgba(0,0,0,0.6);}
+      .sns_box.on{right: 0;}
+      .event_box{left: 0;bottom: -110%;background: rgba(0,0,0,0.6);}
+      .event_box.on{bottom: 0;}
+      .log_box{left: 0;top: -110%;}
+      .log_box.on{top: 0;}
+      
+      /* 왼쪽 사이드 리스트 */
+      .log_fr{width: 65%;height: 165px;background: #6955ce;border-bottom: 1px solid #47389a;padding-top: 40px;text-align: center;color: #fff;}
+      .log_btn{width: 80px;height: 80px;margin: 0 auto;border-radius: 50%;background: #fff;color: #333;font-size: 2em;line-height: 80px;}
+      .lst_status{clear: both;width: 65%;}
+      .lst_status li{width: 33.333333%;float:left; background: #6955ce;text-align: center;}
+      .lst_status li span{color: #fff;display: block;line-height: 2;}
+      .lst_status li span.txt{font-size: 0.8em;font-weight: 300;}
+      .lst_menu{clear: both;width: 65%;background: #ECECEC;    min-height: 70%;}
+      .lst_menu li{padding: 2em;}
+      .lst_menu li a{display: block;color: #333;font-size: 1.1em;}
+      .lst_menu li a:hover, .lst_menu li a:active {text-decoration: underline;}
+      .lst_menu li a i{float: right;color: #ccc;}
+      /*.lst_box .close{display: block;position: absolute;top: 1em;left: 60%;color: #fff;opacity: 1;}*/
+      .lst_box .close{display: block;position: absolute;top: 1em;left: 65%; color: #fff;opacity: 1;width: 30px;height: 30px;background: #6955ce;}
+      
+      /* sns 박스 메뉴 */
+      .sns_lst{width: 120px;height: 120px;margin: 80px auto;background: #fff;padding: 20px;}
+      .sns_lst li{width: 40px;height: 40px;float: left;}
+      .sns_lst li a{display: block;font-size: 2em;text-align: center;line-height: 40px;color: #333;}
+      /*.sns_lst li:sns1:hover a,.sns_lst li:sns1:active a{color: }*/
+      .sns_box .close{display: block;position: absolute;top:80px;left: calc(50% +  65px);color: #fff;opacity: 1;}
+      
+      /* 이벤트 팝업창 박스 */
+      .event_pic{display: block;width: 60%;height: auto;margin: 3em auto;}
+      .event_box .close{display: block;position: absolute;top:1em;right: 1em;color: #fff;opacity: 1;}
+      
+      /* 로그인 박스 */
+      .log_box{background: #fff;}
+      .collap_tit{text-align: center;}
+      .in_frm{display: block;width: 80%;margin: 10px auto;line-height: 36px; border: 1px solid #333;text-indent: 1em;}
+      .btn_frm{display: block;width: 25%;line-height: 36px;margin:5% 12.5% 12.5%;background: #333;color: #fff;float: left;}
+      .log_txt{padding: 3em 5em;text-align: center;font-size: 1em;}
+      .log_box .close{display: block;position: absolute;top:1em;right: 1em;color: #000;opacity: 1;} 
+      
+      /* 메인 영역 */
+      .main{clear: both;width: 100%;height: 100%;}
+      .ico_lst{clear: both;width: 100%;height: 100%;padding-top: 60px;}
+      .ico_lst li{float: left;}
+      .ico_lst li.item1{width: 100%;height: 60%;background: #6955ce;}
+      .ico_lst li.item2,.ico_lst li.item3{width: 50%;height: 40%;}
+      .ico_lst li.item2{background: #aa9eea;}
+      .ico_lst li.item3{background: #6dd8a4;}
+      .ico_lst li.item1 a{display: block;width: 100%;color: #fff;text-indent: 3em;}
+      .ico_lst li.item2 a,.ico_lst li.item3 a{text-align: center;}
+      .ico_lst li a .ico{display: block;width: 40%;height: auto;margin: 20px auto;}
+      .ico_tit{font-size: 1.4em;color: #fff;}
+      .ico_com{color: #fff;padding: 0 1em;}
+      
+      /* 동영상 영역 */
+      .mv_page{clear: both;width: 100%;}
+      .sec_tit{padding-left: 1em;font-size: 1.5em;position: relative;color: #6955ec;font-weight: 600;}
+      .sec_tit:after{display: block;content: "";width: 150px;height: 2px;background: #999;position: absolute;top: 10px;right: 0.5em;}
+      #mv_fr{clear: both;position: relative;width: 100%;}
+      #vdo1{display: block;width: 90%;margin: 10px auto;}
+      #play_btn{width: 60px;height: 60px;font-size: 3em;color: #fff;position: absolute;top: 33%;left: calc(50% - 30px);}
+      
+      /* 푸터 영역 */
+      .ft{clear: both;background: #2b2b2b;color: #fff;padding: 1em;padding-bottom: 1.5em;}
+      .fnb{width: 60%;margin: 0 auto;  }
+      .fnb ul{width: 100%;overflow: hidden;}
+      /* 자손중에 float 값 사용하면 부모에게 overflow: hidden을 써서 높이값을 잡아준다.*/
+      .fnb ul li{float: left;width: 50%;text-align: center; }
+      .fnb ul li a{color: #fff; }
+      .fnb ul li a:hover,.fnb ul li a:active{ text-decoration: underline;}
+      .fnb ul li.item2 a{color: #6dd8a4;}
+      .copyright{clear: both;text-align: center;}
+   </style> 
+   <script>
+        $(document).ready(function(){
+            $(".lst_btn").click(function(){//.lst_btn버튼을 클릭하면
+                $(".lst_box").addClass("on");//.lst_box에 on이라는 클래스를 추가해라. left: 0;
+            });
+            $(".lst_box .close").click(function(){//닫기 버튼을 클릭하면 
+                $(".lst_box").removeClass("on");//.lst_box에  on이라는 클래스를 삭제해라. left: -110%;
+            });
+            $(".sns").click(function(){
+                $(".sns_box").addClass("on");
+            });
+            $(".sns_box .close").click(function(){
+                $(".sns_box").removeClass("on");
+            });
+            $(".ev").click(function(){
+                $(".event_box").addClass("on");
+            });
+            $(".event_box .close").click(function(){
+                $(".event_box").removeClass("on");
+            });
+            $(".log").click(function(){
+                $(".log_box").addClass("on");
+            });
+            $(".log_box .close").click(function(){
+                $(".log_box").removeClass("on");
+            });
+            
+        });
+    
+    </script>
+   
+   
+   
+</head>
+<body>
+    <header class="hd">
+        <button class="lst_btn"><i class="xi-bars"></i></button>
+        <a href="index.html" class="logo"></a>
+        <button class="sns"><i class="xi-share-alt-o"></i></button>
+        <button class="ev"><i class="xi-flag-o"></i></button>
+        <button class="log"><i class="xi-user-o"></i></button>
+    </header>
+    <div class="lst_box">
+        <!--div.log_fr
+        ul.lst_status>li.item$*3>span.*2
+        ul.lst_menu>li.item$*4>a
+        button.close-->
+        <div class="log_fr">
+            <div class="log_btn"><i class="fas fa-lock-open"></i></div>
+            <button class="btn">로그인</button>
+        </div>
+        <ul class="lst_status">
+            <li class="item1"><span class="ico">0</span><span class="txt">Stay</span></li>
+            <li class="item2"><span class="ico">1</span><span class="txt">Taste</span></li>
+            <li class="item3"><span class="ico">2</span><span class="txt">Move</span></li>
+        </ul>
+        <ul class="lst_menu">
+            <li class="item1"><a href="#">가게소개<i class="fas fa-plus"></i></a></li>
+            <li class="item2"><a href="#">여행장소<i class="fas fa-greater-than"></i></a></li>
+            <li class="item3"><a href="#">Campaign 2021<i class="fas fa-greater-than"></i></a></li>
+            <li class="item4"><a href="#">할인쿠폰<i class="fas fa-greater-than"></i></a></li>
+        </ul>
+        <button class="close"><i class="fas fa-times"></i></button>
+    </div><!-- 왼쪽메뉴-->
+    <!--div.sns_box>ul.sns_lst>li.sns$*4>a-->
+    <div class="sns_box">
+        <ul class="sns_lst">
+            <li class="sns1"><a href="#"><i class="xi-kakaotalk"></i></a></li>
+            <li class="sns2"><a href="#"><i class="xi-facebook-official"></i></a></li>
+            <li class="sns3"><a href="#"><i class="xi-blogger"></i></a></li>
+            <li class="sns4"><a href="#"><i class="xi-twitter"></i></a></li>
+        </ul>
+        <button class="close"><i class="fas fa-times"></i></button>      
+    </div><!--오른쪽 박스 sns-->
+    <div class="event_box">
+        <img src="data/mobile_intro.jpg" alt="팝업창" class="event_pic">
+        <button class="close"><i class="fas fa-times"></i></button> 
+    </div>
+    <div class="log_box">
+        <h3 class="collap_tit">로그인</h3>
+        <form action="" method="post">
+            <fieldset class="in_fr">
+                <input type="text" name="id" placeholder="아이디 입력" id="m_id" class="in_frm" autofocus>
+                <input type="password" name="pw" placeholder="패스워드 입력" id="m_pw" class="in_frm">
+            </fieldset>
+            <fieldset class="btn_fr">
+                <input type="submit" class="btn_frm" value="로그인">
+                <input type="reset" class="btn_frm" value="취소">
+            </fieldset>
+            <p class="log_txt">회원가입시 풍성한 혜택과 알림서비스로 보답합니다. 많은 가입과 권유 그리고 성원 부탁드립니다. </p>
+        </form>
+        <button class="close"><i class="fas fa-times"></i></button> 
+    </div><!-- 로그인페이지 -->
+    <section class="main">
+        <!--ul.ico_lst>li.item$*3>a>img.ico+h3.ico_tit+p.ico_com-->
+        <ul class="ico_lst">
+            <li class="item1"><a href="sub1.html">
+                    <img src="./data/group_1.jpg" alt="제주읽기" class="ico">
+                    <h3 class="ico_tit">제주읽기</h3>
+                    <p class="ico_com">렌터카 빅데이터로 보는 제주 인기 방문지 Top10</p>
+                </a></li>
+            <li class="item2"><a href="">
+                    <img src="./data/group_2.jpg" alt="제주쓰기" class="ico">
+                    <h3 class="ico_tit">제주쓰기</h3>
+                    <p class="ico_com">제주 사람들의 제주 여행기</p>
+                </a></li>
+            <li class="item3"><a href="">
+                    <img src="./data/group_3.jpg" alt="제주말하기" class="ico">
+                    <h3 class="ico_tit">제주말하기</h3>
+                    <p class="ico_com">외지인의 제주 부동산 사재기! 문제는 플랫폼이야 </p>
+                </a></li>
+        </ul>
+    </section>
+    <section class="mv_page">
+        <h3 class="sec_tit">제주 가게 미디어</h3>
+        <div id="mv_fr">
+            <video src="./data/video1.mp4" id="vdo1"></video>
+            <button id="play_btn"><i class="xi-play-circle-o"></i></button>
+        </div>
+    </section>
+    <script>
+       var vdo=document.getElementById("vdo1");//#vdo
+       var btn=document.getElementById("play_btn");//#play_btn
+        btn.addEventListener("click",function(){
+            if(vdo.paused){//동영상이 멈춰있을 경우
+               vdo.play();
+               btn.style.opacity = 0.1; 
+            } else {//그렇지 않으면(동영상이 플레이 되고 있는 경우)
+                vdo.pause();
+                btn.style.opacity = 0.7;
+            }      
+        });
+ 
+    </script>
+    <footer class="ft">
+        <nav class="fnb">
+            <ul class="menu">
+                <li class="item1"><a href="sub2.html#tab1">이용약관</a></li>
+                <li class="item2"><a href="sub2.html#tab2">개인정보처리방침</a></li>
+            </ul>
+        </nav>
+        <p class="copyright">ALL COPYRIGHT BY &copy; JEJU TRIP.</p>
+    </footer>
+    
+</body>
+</html>

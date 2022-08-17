@@ -1,0 +1,13 @@
+<script>
+    var vdo = document.getElementById("vdo1");   //#vdo1
+    var btn = document.getElementById("play_btn");  //#play_btn
+    btn.addEventListener("click", function(){
+        if(vdo.paused){
+            vdo.play();
+            btn.style.opacity = 0.1;
+        } else {
+            vdo.pause();
+            btn.style.opcity = 0.7;
+        }
+    });
+ </script>

@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<!-- 인터넷 익스플로러용 타일 아이콘 144x144 -->
+    <meta name="msapplication-TileColor" content="#FFFFFF"> 						
+    <meta name="msapplication-TileImage" content="./ico/favicon_144x144.png">
+    <!-- 모바일 웹앱 문서정보에 대한 설정 -->
+    <meta name="title" content="제주 여행 사이트">
+    <meta name="auther" content="정혜진">
+    <meta name="url" content="http://아이디.dothome.co.kr/m3">
+    <meta name="description" content="제주여행, 숙박,먹거리,볼거리 ">
+    <meta name="keywords" content=" jeju,jeju trip,제주, 숙박,제주여행, 숙박,먹거리,볼거리">
+    <!-- 애플 어플 문서 정보 설정 -->
+    <meta name="apple-mobile-web-app-title" content="제주여행, 숙박,먹거리,볼거리">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 소셜에 문서정보 노출 설정 -->
+    <meta itemprop="name" content="제주 여행">
+    <meta itemprop="description" content="제주여행, 숙박, 먹거리, 볼거리">
+    <meta itemprop="image" content="./ico/favicon_256x256.png" >
+    <!-- 페이스북에 노출 설정 -->
+    <meta property="fb:app_id" content="APP_ID">
+   <!-- 카카오톡, 블로그 등의 크롤링으로 화면 미리보기 노출 -->
+    <meta property="og:type" content="Website">
+    <meta property="og:title" content="제주여행">
+    <meta property="og:url" content="http://아이디.dothome.co.kr/m2/index.html">
+    <meta property="og:description" content="제주여행, 숙박,먹거리,볼거리">
+    <meta property="og:img" content="http://아이디.dothome.co.kr/m2/data/vs1.png"><!-- 썸네일이미지 . http://부터 시작하는 절대주소로 남겨야 함 -->

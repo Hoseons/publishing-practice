@@ -1,0 +1,8 @@
+ <!-- 폰트어썸 링크,CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css" />
+ <!-- XE-icon CDN-->
+ <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+
+    <!--  XE-icon 다운로드 후 링크-->
+     <link rel="stylesheet" href="./xeicon.min.css">

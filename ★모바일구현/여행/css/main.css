@@ -1,0 +1,685 @@
+/*HEADER*/
+
+.hd {
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-bottom: 1px solid #1E9143;
+    z-index: 999;
+}
+
+.hd .togBtn {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: calc(50% - 15px);
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    color: #1E9143;
+
+}
+
+.hd i {
+    font-size: 1.8em;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: calc(50% - 59.5px);
+    width: 119px;
+    height: 49px;
+
+}
+
+.logo a {
+    display: block;
+    width: 100%;
+    height: 36.333333333333333333333333333333px;
+}
+
+.logo img {
+    display: block;
+    width: 100%;
+
+}
+
+
+/*LEFTMENU SECTION*/
+
+#leftMenu {
+    width: 100%;
+    height: 1404px;
+    position: absolute;
+    left: -100%;
+    top: 0;
+
+    z-index: 1000;
+    display: flex;
+    transition: all 0.6s;
+
+}
+
+#leftMenu .leftMenuBox {
+    width: 70%;
+    height: 1404px;
+    background: #fff;
+    position: relative;
+    border-right: 3px solid #1E9143;
+
+
+
+}
+
+.leftMenuBox .leftMenuHead {
+    width: 100%;
+    height: 65px;
+    position: relative;
+}
+
+.leftMenuHead .menu_log {
+    position: absolute;
+    left: 15px;
+    /*    left: 10px;*/
+    top: 15px;
+    width: 100px;
+}
+
+.leftMenuHead .close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 0.8em;
+    cursor: pointer;
+    color: #1E9143;
+}
+
+.search {
+    width: 100%;
+    height: 45px;
+    background: #1E9143;
+    position: relative;
+}
+
+.search .searchBox {
+
+    position: absolute;
+    left: 15px;
+    top: calc(50% - 13.5px);
+
+    width: 80%;
+    height: 27px;
+    background: #fff;
+
+    border-radius: 5px;
+
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.searchBox input {
+    float: left;
+    width: 75%;
+    height: 27px;
+    text-indent: 15px;
+    background-color: transparent;
+    border: 0;
+
+}
+
+.search button {
+
+    width: 25%;
+    height: 27px;
+
+    background-color: darkorange;
+    cursor: pointer;
+}
+
+.search button i {
+    font-size: 1.8em;
+    color: #fff;
+}
+.leftMenuBox .coronaBann{
+    width: 100%;
+    height: 65px;
+    position: relative;
+    
+}
+.coronaBann .coronaCon{
+    width: 100%;
+    height: 65px;
+    background: url(../image/corona.jpg) no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+/*    border-radius: 20px;*/
+}
+.coronaCon a{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.coronaCon p,span{
+    font-family: 'Pretendard-Black';
+    font-size: 32px;
+    font-weight:900;
+    
+    
+}
+.coronaCon p{
+    position: absolute;
+    top: 12px;
+    left: 19%;
+/*    color: #1e4a4e;*/
+    color:#6c4b24;
+}
+.coronaCon span{
+    color:#a31111;
+}
+.leftMenuBox .leftMenu {
+
+
+    width: 100%;
+    height: auto;
+
+
+
+}
+
+.leftMenu > ul {
+    position: relative;
+    width: 100%;
+    height: auto;
+    
+}
+
+.leftMenu .MenuCon {
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 55px;
+    text-indent: 10px;
+    border-bottom: 1px solid #1E9143;
+        position: relative;
+    background: #fff;
+    overflow: hidden;
+
+
+
+
+}
+
+.leftMenu .MenuCon .xi-angle-right-min {
+    font-size: 1.2em;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    transform: rotate(0);
+}
+
+/*
+.xi-angle-right-min.on {
+    transform: rotate(90deg);
+}
+*/
+
+.leftMenuSub {
+   transition:  all 0.6s;
+
+        visibility: hidden;
+    width: 100%;
+        max-height: 0;
+/*    height: auto;*/
+    text-indent: 20px;
+    
+    
+
+
+}
+
+.leftMenuSub .MenuSubCon {
+
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 17px;
+    border-bottom: 1px solid #ccc;
+
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+.MenuCon.on .leftMenuSub {
+   transition:  all 0.6s;
+    width: 100%;
+    max-height: 200px;
+    visibility: visible;
+
+}
+
+#leftMenu .menu_box_null {
+    width: 30%;
+    height: 100%;
+    background-color: transparent;
+}
+
+
+
+/*BANNER SECTION*/
+.banner {
+    width: 100%;
+    height: 280px;
+
+    margin-top: 60px;
+    position: relative;
+}
+
+.banner .ban_ul {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 280px;
+
+
+}
+
+.banner .ban_con {
+    float: left;
+    width: 100%;
+    height: 280px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.6s ease-in;
+}
+
+/*
+.banner .ban_con:nth-child(1){
+    
+    opacity: 1;
+}
+*/
+.banner .ban_con.on {
+
+    opacity: 1;
+}
+
+.banner img {
+    width: 100%;
+    height: 280px;
+}
+
+.banner .imgControl{
+    width: 30%;
+    height: 40px;
+    background: red;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 15%);
+    z-index: 1;
+}
+
+
+/*WEATHER SECTION*/
+
+#weather {
+    width: 100%;
+    height: 70px;
+    /*    background-color: #82a22a;*/
+    background-color: #608c13;
+    position: relative;
+
+    text-indent: 15px;
+    /*    cursor: pointer;*/
+}
+
+#weather span {
+    color: aliceblue;
+    line-height: 70px;
+    font-size: 20px;
+    font-weight: 600;
+    float: left;
+
+
+}
+
+.weatherBlock {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.weatherBlock > div {
+    float: left;
+
+}
+
+
+.CurrIcon i {
+    font-size: 40px;
+    color: white;
+}
+
+.CurrTemp {
+    font-size: 35px;
+    color: white;
+}
+
+.Currmain {
+    line-height: 40px;
+    font-size: 1.3em;
+    color: white;
+}
+
+
+
+
+/*SEC_LI SECTION*/
+.sec_li {
+    clear: both;
+    width: 100%;
+    height: 514px;
+    /*    height: 589px;*/
+    background-color: rgb(248, 232, 213);
+
+}
+
+.sec_li .secli1 {
+
+
+    height: 515px;
+    /*      height: 590px;*/
+    width: 100%;
+    padding: 25px 5%;
+
+
+    /*    360정도*/
+}
+
+.sec_li .secli1 .Menulist {
+    float: left;
+    width: 43%;
+    height: 220px;
+    /*    margin-right: 5%;*/
+    text-align: center;
+    line-height: 100px;
+    /*    box-sizing: border-box;*/
+    /*    border: 1px solid green;*/
+    border-radius: 10%;
+    margin-bottom: 25px;
+    box-shadow: 3px 3px 7px 2px rgba(0, 0, 0, 0.05);
+    transition: all 0.8s;
+
+
+
+
+}
+
+.sec_li .Menulist > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+
+.sec_li .Menulist > a > span {
+    line-height: 370px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.sec_li .li_1 {
+    background: url(../image/place1.svg) no-repeat;
+    background-position: center center;
+    background-size: 55%;
+    /*    background-color: bisque;*/
+    background-color: white;
+    margin-right: 4%;
+    transition: all 0.8s;
+}
+
+.sec_li .li_2 {
+    background: url(../image/spoon.svg) no-repeat;
+    background-position: center center;
+    background-size: 55%;
+
+    background-color: white;
+    transition: all 0.8s;
+
+}
+
+.sec_li .li_3 {
+    background: url(../image/bus.svg) no-repeat;
+    background-position: center center;
+    background-size: 55%;
+    background-color: white;
+    margin-right: 4%;
+    margin-bottom: 0;
+    transition: all 0.8s;
+
+}
+
+.sec_li .li_4 {
+    background: url(../image/room.svg) no-repeat;
+    background-position: center center;
+    background-size: 55%;
+    background-color: white;
+    margin-bottom: 0;
+    transition: all 0.8s;
+}
+
+.Menulist:hover {
+    background-size: 60%;
+    transition: all 0.8s;
+    background-color: rgb(238, 215, 167);
+
+}
+
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+
+/*RECOMMEND SECTION*/
+.recommend {
+    width: 100%;
+    height: 150px;
+    background: url(../image/recom.jpg) no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    position: relative;
+
+}
+
+/*
+.recommend img {
+    position: absolute;
+    left: 20px;
+    top: 7px;
+    width: 140px;
+    height: 140px;
+    transform: scale(1);
+    transition: 0.8s;
+}
+*/
+.recommend span{
+    font-family: 'Manse';
+    position: absolute;
+    top:1px;
+    left: 25%;
+    font-size: 90px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    transform: scale(1);
+        transition: 0.6s;
+
+}
+.recommend:hover span {
+transform: scale(1.05);
+    transition: 0.6s;
+}
+
+.recommend a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/*INTRO SECTION*/
+.intro {
+
+    width: 100%;
+    height: 150px;
+    background: url(../image/intro.jpg) no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    position: relative;
+}
+
+.intro a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.intro a span{
+    color:#fff;
+    font-size: 55px;
+    position: absolute;
+    top: 33px;
+    right: 30px;
+    font-family: 'S-CoreDream-3Light';
+    font-weight: bold;
+    opacity:0.7;
+}
+.intro span:after{
+    content: "";
+    display: block;
+    clear: both;
+    width: 100%;
+    height: 3px;
+    border-bottom: 3px solid #fff;
+    opacity: 0;
+        transition: 0.7s;
+
+}
+.intro:hover span:after{
+    transition: 0.7s;
+    opacity: 1;
+}
+/*
+.intro img {
+    width: 83px;
+    height: 130px;
+    position: absolute;
+    right: 40px;
+    top: calc(50% - 65px);
+    transform: scale(1);
+    transition: 0.8s;
+}
+
+.intro:hover img {
+    transform: scale(1.05);
+    transition: 0.8s;
+}
+*/
+
+/*CORONA SECTION*/
+/*
+.corona {
+    width: 100%;
+    height: 150px;
+    background: url(../image/corona.jpg) no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.corona a {
+    width: 100%;
+    height: 100%;
+    
+    display: block;
+     background: red; 
+}
+
+.corona img {
+    width: 150px;
+    height: 156px;
+    position: absolute;
+    right: 10px;
+    transform: scale(1);
+    transition: 0.8s;
+}
+
+.corona:hover img {
+    transform: scale(1.05);
+    transition: 0.8s;
+}
+*/
+
+
+/*FOOTER SECTION*/
+.ft {
+    width: 100%;
+    height: 150px;
+     background: #ac895f; 
+    border-top: 1px solid #fff;
+    padding-top: 10px;
+    box-sizing: border-box;
+
+
+}
+
+.ft .ftTxt {
+    width: 90%;
+    margin: 0 auto;
+    clear: both;
+
+}
+
+.ft .ftTxt li {
+    width: 30%;
+    float: left;
+    font-size: 0.9em;
+    margin-right: 8px;
+
+}
+
+.ftTxt li a {
+    font-weight: 600;
+    color: #fff;
+}
+
+.ft .ftTxt li:nth-child(2) a {
+    color: #ab2100;
+
+}
+
+.ft p {
+    clear: both;
+    margin-top: 30px;
+}
+
+.ft address {
+
+    text-align: center;
+    font-style: normal;
+    font-size: 14px;
+}
+
+.ft .copyright {
+    text-align: center;
+    margin-top: 10px;
+}

@@ -1,0 +1,16 @@
+
+   <!-- 파비콘 및 메타포 아이콘 적용 -->
+    <!-- 가장 작은 형태EX12.의 16x16 크기의 ico -->
+    <link rel="shortcut icon" href="./ico/favicon.ico">
+    <!-- 가장 작은 형태의 16x16 크기의 png -->
+    <link rel="shortcut icon" href="./ico/favicon16x16.png" type="image/x-icon">
+    <!-- 일반 앱형태의 아이콘 설정 -->
+    <link rel="icon" href="./ico/favicon.ico">
+    <link rel="icon" href="./ico/favicon_16x16.png" sizes="16x16"> 
+    <link rel="icon" href="./ico/favicon_32x32.png" sizes="32x32"> 
+    <link rel="icon" href="./ico/favicon_48x48.png" sizes="48x48"> 
+    <link rel="icon" href="./ico/favicon_64x64.png" sizes="64x64"> 
+    <link rel="icon" href="./ico/favicon_128x128.png" sizes="128x128">
+    <!-- 아이폰 고해상도용 파비콘 152x152 -->
+    <link rel="apple-touch-icon-precomposed" href="./ico/favicon_152.png">
+    <!-- 인터넷 익스플로러용 타일 아이콘 144x144 -->

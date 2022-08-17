@@ -1,0 +1,22 @@
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- 인터넷 익스플로러용 타일 아이콘 144x144 -->
+    <meta name="msapplication-TileColor" content="#FFFFFF"> 						
+    <meta name="msapplication-TileImage" content="./ico/favicon_144x144.png">
+    <!-- 모바일 웹앱 문서정보에 대한 설정 -->
+    <meta name="title" content="애니메이션 웹사이트">
+    <meta name="auther" content="홍길동">
+    <meta name="url" content="http://www.naver.com">
+    <meta name="description" content="애니메이션 사이트 개발하기">
+    <meta name="keywords" content=" html5, css, javascript, jQuery,transform,transition,anumation">
+    <!-- 애플 어플 문서 정보 설정 -->
+    <meta name="apple-mobile-web-app-title" content="애니메이션 웹사이트">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 소셜에 문서정보 노출 설정 -->
+    <meta itemprop="name" content="애니메이션">
+    <meta itemprop="description" content="애니메이션 사이트 개발하기">
+    <meta itemprop="image" content="./ico/favicon-256.png" >
+    <!-- 페이스북에 노출 설정 -->
+    <meta property="fb:app_id" content="APP_ID">
+   

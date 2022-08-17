@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>트립 제주</title>
+    <!-- 인터넷 익스플로러용 타일 아이콘 144x144 -->
+    <meta name="msapplication-TileColor" content="#FFFFFF"> 						
+    <meta name="msapplication-TileImage" content="./ico/favicon_144x144.png">
+    <!-- 모바일 웹앱 문서정보에 대한 설정 -->
+    <meta name="title" content="제주여행 웹사이트">
+    <meta name="auther" content="홍길동">
+    <meta name="url" content="http://아이디.dothome.co.kr/m2/index.html">
+    <meta name="description" content="제주 여행 맛집,볼거리,숙박 정보">
+    <meta name="keywords" content="제주여행,제주공항, 제주 해수욕장, 제주맛집,제주 숙박, 제주펜션">
+    <!-- 애플 어플 문서 정보 설정 -->
+    <meta name="apple-mobile-web-app-title" content="제주여행 사이트">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 소셜에 문서정보 노출 설정 -->
+    <meta itemprop="name" content="트립제주">
+    <meta itemprop="description" content="제주 여행 맛집,볼거리,숙박 정보">
+    <meta itemprop="image" content="./ico/favicon_256x256.png" >
+    <!-- 페이스북에 노출 설정 -->
+    <meta property="fb:app_id" content="APP_ID">
+    <!-- 카카오톡, 블로그 등의 크롤링으로 화면 미리보기 노출 -->
+    <meta property="og:type" content="Website">
+    <meta property="og:title" content="제주여행">
+    <meta property="og:url" content="http://아이디.dothome.co.kr/m2/index.html">
+    <meta property="og:description" content="제주여행, 숙박,먹거리,볼거리">
+    <meta property="og:img" content="http://아이디.dothome.co.kr/m2/data/vs1.png">
+   
+   <!-- 파비콘 및 메타포 아이콘 적용 -->
+    <!-- 가장 작은 형태EX12.의 16x16 크기의 ico -->
+    <link rel="shortcut icon" href="./ico/favicon.ico">
+    <!-- 가장 작은 형태의 16x16 크기의 png -->
+    <link rel="shortcut icon" href="./ico/favicon16x16.png" type="image/x-icon">
+    <!-- 일반 앱형태의 아이콘 설정 -->
+    <link rel="icon" href="./ico/favicon.ico">
+    <link rel="icon" href="./ico/favicon_16x16.png" sizes="16x16"> 
+    <link rel="icon" href="./ico/favicon_32x32.png" sizes="32x32"> 
+    <link rel="icon" href="./ico/favicon_48x48.png" sizes="48x48"> 
+    <link rel="icon" href="./ico/favicon_64x64.png" sizes="64x64"> 
+    <link rel="icon" href="./ico/favicon_128x128.png" sizes="128x128">
+    <!-- 아이폰 고해상도용 파비콘 152x152 -->
+    <link rel="apple-touch-icon-precomposed" href="./ico/favicon_152.png">
+    
+     <!--상대경로. 부트스트랩파일 가지고 있을 경우  
+   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <script src="jquery.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>-->
+   <!-- 제이쿼리 파일 CDN 형식으로 연결-->
+   <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+   <!-- 부트스트랩 CDN 방식 -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+   
+  <!-- 폰트 어썸-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css" >
+ <!--  xe-icon CDN-->
+   <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+   
+   <link rel="stylesheet" href="font.css">
+  <!--구글폰트 링크 CDN -->
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="normalize.css">
+    <style>
+    body,html{height: 100%;font-family: 'Noto Sans KR', sans-serif;}
+        
+    /*헤더영역*/
+      .hd{width: 100%;height: 60px;background: #6955ce;border-bottom: 1px solid #eee;position: fixed;left: 0;top: 0;}
+      .hd button{position: absolute;top: 1em;z-index: 91;display: block;cursor: pointer;}
+      .hd button i{font-size: 1.8em;color: #fff;}
+      .lst_btn{left: 1em;}
+      .sns{right: 5em;}
+      .ev{right: 3em;}
+      .log{right: 1em;}
+      .logo{display: block;width: 100px;height: 34px;background-image: url(data/logo_beta.png);background-size: 100%;background-repeat: no-repeat;/*background-position: center center;*/margin: 0.5em auto;}
+      
+      .lst_box, .sns_box, .event_box, .log_box{width: 100%;height: 100%;position: fixed;z-index: 999;overflow: hidden;transition: 0.5s;}
+      /*헤더 버튼 클릭시 박스 위치 */
+      .lst_box{left: -110%;top: 0;background: rgba(0,0,0,0.6);}
+      .lst_box.on{left: 0;}
+      .sns_box{right: -110%;top: 0;background: rgba(0,0,0,0.6);}
+      .sns_box.on{right: 0;}
+      .event_box{left: 0;bottom: -110%;background: rgba(0,0,0,0.6);}
+      .event_box.on{bottom: 0;}
+      .log_box{left: 0;top: -110%;}
+      .log_box.on{top: 0;}
+      
+      /* 왼쪽 사이드 리스트 */
+      .log_fr{width: 65%;height: 165px;background: #6955ce;border-bottom: 1px solid #47389a;padding-top: 40px;text-align: center;color: #fff;}
+      .log_btn{width: 80px;height: 80px;margin: 0 auto;border-radius: 50%;background: #fff;color: #333;font-size: 2em;line-height: 80px;}
+      .lst_status{clear: both;width: 65%;}
+      .lst_status li{width: 33.333333%;float:left; background: #6955ce;text-align: center;}
+      .lst_status li span{color: #fff;display: block;line-height: 2;}
+      .lst_status li span.txt{font-size: 0.8em;font-weight: 300;}
+      .lst_menu{clear: both;width: 65%;background: #ECECEC;    min-height: 70%;}
+      .lst_menu li{padding: 2em;}
+      .lst_menu li a{display: block;color: #333;font-size: 1.1em;}
+      .lst_menu li a:hover, .lst_menu li a:active {text-decoration: underline;}
+      .lst_menu li a i{float: right;color: #ccc;}
+      /*.lst_box .close{display: block;position: absolute;top: 1em;left: 60%;color: #fff;opacity: 1;}*/
+      .lst_box .close{display: block;position: absolute;top: 1em;left: 65%; color: #fff;opacity: 1;width: 30px;height: 30px;background: #6955ce;}
+      
+      /* sns 박스 메뉴 */
+      .sns_lst{width: 120px;height: 120px;margin: 80px auto;background: #fff;padding: 20px;}
+      .sns_lst li{width: 40px;height: 40px;float: left;}
+      .sns_lst li a{display: block;font-size: 2em;text-align: center;line-height: 40px;color: #333;}
+      /*.sns_lst li:sns1:hover a,.sns_lst li:sns1:active a{color: }*/
+      .sns_box .close{display: block;position: absolute;top:80px;left: calc(50% +  65px);color: #fff;opacity: 1;}
+      
+      /* 이벤트 팝업창 박스 */
+      .event_pic{display: block;width: 60%;height: auto;margin: 3em auto;}
+      .event_box .close{display: block;position: absolute;top:1em;right: 1em;color: #fff;opacity: 1;}
+      
+      /* 로그인 박스 */
+      .log_box{background: #fff;}
+      .collap_tit{text-align: center;}
+      .in_frm{display: block;width: 80%;margin: 10px auto;line-height: 36px; border: 1px solid #333;text-indent: 1em;}
+      .btn_frm{display: block;width: 25%;line-height: 36px;margin:5% 12.5% 12.5%;background: #333;color: #fff;float: left;}
+      .log_txt{padding: 3em 5em;text-align: center;font-size: 1em;}
+      .log_box .close{display: block;position: absolute;top:1em;right: 1em;color: #000;opacity: 1;} 
+      
+      /* 푸터 영역 */
+      .ft{clear: both;background: #2b2b2b;color: #fff;padding: 1em;padding-bottom: 1.5em;}
+      .fnb{width: 60%;margin: 0 auto;  }
+      .fnb ul{width: 100%;overflow: hidden;}
+      /* 자손중에 float 값 사용하면 부모에게 overflow: hidden을 써서 높이값을 잡아준다.*/
+      .fnb ul li{float: left;width: 50%;text-align: center; }
+      .fnb ul li a{color: #fff; }
+      .fnb ul li a:hover,.fnb ul li a:active{ text-decoration: underline;}
+      .fnb ul li.item2 a{color: #6dd8a4;}
+      .copyright{clear: both;text-align: center;}
+   </style> 
+   <script>
+        $(document).ready(function(){
+            $(".lst_btn").click(function(){//.lst_btn버튼을 클릭하면
+                $(".lst_box").addClass("on");//.lst_box에 on이라는 클래스를 추가해라. left: 0;
+            });
+            $(".lst_box .close").click(function(){//닫기 버튼을 클릭하면 
+                $(".lst_box").removeClass("on");//.lst_box에  on이라는 클래스를 삭제해라. left: -110%;
+            });
+            $(".sns").click(function(){
+                $(".sns_box").addClass("on");
+            });
+            $(".sns_box .close").click(function(){
+                $(".sns_box").removeClass("on");
+            });
+            $(".ev").click(function(){
+                $(".event_box").addClass("on");
+            });
+            $(".event_box .close").click(function(){
+                $(".event_box").removeClass("on");
+            });
+            $(".log").click(function(){
+                $(".log_box").addClass("on");
+            });
+            $(".log_box .close").click(function(){
+                $(".log_box").removeClass("on");
+            });
+            
+        });
+    
+    </script> 
+    
+    <style>
+    /* sub1.html 만의 스타일 */
+        .content{clear: both;padding-top: 60px;height: auto;}
+        .tb_box{width: 100%;padding-top: 20px;}
+        .tb_box .tb_btn{display: block;width: 33.33333%;line-height: 40px;background: #333;color: #fff;position: fixed;top: 60px;z-index: 40;text-align: center;}
+        #tab1 .tb_btn{left: 0;}
+        #tab2 .tb_btn{left: 33.33333%;}
+        #tab3 .tb_btn{left: 66.66666%;}
+        .tb_con{width: 100%;padding-top: 90px;display: none;}
+        .tb_box .tb_btn.on{background: #6955ce;}
+        .tb_box .tb_con.on{display: block;}
+        /* #tab1 .tb_con{padding-top: 90px;}*/
+        #tab2 .tb_con, #tab3 .tb_con{width: 100%;height: 100vh;}
+        
+        .tb_title{width: 95%;font-size: 1.2em;text-indent: 1em; }
+        .slide{clear: both;width: 96%;margin: 0 auto;}
+        .slide img{display: block;width: 100%;height: auto;margin: 0 auto;}
+        .ban{width: 96%;margin: 0 auto;}
+        .ban img{display: block;width: 100%;height: auto;margin: 0 auto;}
+        .t_box{width: 96%;border-top: 5px solid #666;border-bottom: 5px solid #666;box-sizing: border-box;margin: 0 auto;border-collapse: collapse;}/*table 태그    border-collapse: collapse;테이블 테두리와 셀의 테두리를 밀착*/
+        .t_box td{border-bottom: 1px solid #666;}
+        .t_box .img_thum{width: 30%;padding: 10px;box-sizing: border-box;}
+        .t_box .img_thum img{width: 100%;}
+        .t_box .txt{width: 70%;padding: 10px;}
+        .t_box .date{color: #666;}
+    </style>
+    <script>
+       /*1안: jQuery(document).ready(function(){});
+       2안:$(document).ready(function(){});
+       3안:$(document).load(function(){});
+       4안: $(function(){});*/
+        $(function(){
+            $(".tb_box a").click(function(){
+                $(".tb_box a").removeClass("on");
+                $(this).addClass("on");
+                $(this).siblings("div").addClass("on");
+            });
+            //$(this)==$(".tb_box a")
+            //.siblings : 형제관계에 있는 것 중
+            //.addClass("on")== display:block 보이게 해라
+        });
+    </script>
+</head>
+<body>
+   <header class="hd">
+       <button class="lst_btn"><i class="xi-bars"></i></button>
+       <a href="index.html" class="logo"></a>
+       <button class="sns"><i class="xi-share-alt-o"></i></button>
+       <button class="ev"><i class="xi-flag-o"></i></button>
+       <button class="log"><i class="xi-user-o"></i></button>
+   </header>
+    
+    <div class="lst_box">
+        <!--div.log_fr
+        ul.lst_status>li.item$*3>span.*2
+        ul.lst_menu>li.item$*4>a
+        button.close-->
+        <div class="log_fr">
+            <div class="log_btn"><i class="fas fa-lock-open"></i></div>
+            <button class="btn">로그인</button>
+        </div>
+        <ul class="lst_status">
+            <li class="item1">
+                <span class="ico">0</span>
+                <span class="txt">Stay</span>
+            </li>
+            <li class="item2">
+                <span class="ico">1</span>
+                <span class="txt">Taste</span>
+            </li>
+            <li class="item3">
+                <span class="ico">2</span>
+                <span class="txt">Move</span>
+            </li>
+        </ul> 
+        <ul class="lst_menu">
+            <li class="item1"><a href="">가게소개<i class="fas fa-greater-than"></i></a></li>
+            <li class="item2"><a href="">여행변소<i class="fas fa-greater-than"></i></a></li>
+            <li class="item3"><a href="">Campaign 2021<i class="fas fa-greater-than"></i></a></li>
+            <li class="item4"><a href="">할인쿠폰<i class="fas fa-greater-than"></i></a></li>
+        </ul>
+        <button class="close"><i class="xi-close"></i></button>
+    </div>
+    <div class="sns_box">
+        <ul class="sns_lst">
+            <li class="sns1"><a href=""><i class="xi-kakaotalk"></i></a></li>
+            <li class="sns2"><a href=""><i class="xi-facebook"></i></a></li>
+            <li class="sns3"><a href=""><i class="xi-blogger"></i></a></li>
+            <li class="sns4"><a href=""><i class="xi-twitter"></i></a></li>
+        </ul>
+        <button class="close"><i class="xi-close"></i></button>
+    </div>
+    <div class="event_box">
+        <img src="./data/mobile_intro.jpg" alt="팝업창" class="event_pic">
+        <button class="close"><i class="xi-close"></i></button>
+    </div> 
+    <div class="log_box">
+        <h3 class="collap_tit">로그인</h3>
+        <form action="" method="post">
+            <fieldset class="in_fr">
+                <input type="text" name="id" placeholder="아이디 입력" id="m_id" class="in_frm" autofocus >
+                <input type="password" name="pw" placeholder="패스워드 입력" id="m_pw" class="in_frm">
+            </fieldset>
+             <fieldset class="btn_fr">
+                <input type="submit" class="btn_frm" value="로그인">
+                <input type="reset" class="btn_frm" value="취소">
+            </fieldset>
+            <p class="log_txt">회원가입시 풍성한 혜택과 알림 서비스로 보답합니다. 많은 가입와 권유 그리고 성원 부탁드립니다.</p>
+        </form>
+        <button class="close"><i class="xi-close"></i></button>
+    </div>
+   
+     <div class="content">
+        <!-- div.tb_box#tab$*3>a.tb_btn+div.tb_con   -->
+         <div class="tb_box " id="tab1">
+             <a href="#tab1" class="tb_btn on">제주먹거리</a>
+             <div class="tb_con on">
+                 <h3 class="tb_title">제주먹거리</h3>
+                 <div class="slide"><img src="data/sub_item1.jpg" alt=""></div>
+                 <div class="ban"><img src="data/n_3.jpg" alt=""></div>
+                 <table class="t_box">
+                     <tr>
+                         <td class="img_thum"><img src="data/data1.jpg" alt="아빠어디가"></td>
+                         <td class="txt">
+                             <h4 class="t_box_tit">제목1</h4>
+                             <p class="t_box_con">내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.</p>
+                             <span class="date">2021.02.20 15:30</span>
+                         </td>
+                     </tr>
+                     <tr>
+                          <td class="img_thum"><img src="data/data2.jpg" alt="이미지"></td>
+                         <td class="txt">
+                             <h4 class="t_box_tit">제목2</h4>
+                             <p class="t_box_con">내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.</p>
+                             <span class="date">2021.02.15 17:30</span>
+                         </td>
+                     </tr>
+                     <tr>
+                          <td class="img_thum"><img src="data/data3.jpg" alt="솔드아웃"></td>
+                         <td class="txt">
+                             <h4 class="t_box_tit">제목3</h4>
+                             <p class="t_box_con">내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.</p>
+                             <span class="date">2021.01.23 19:30</span>
+                         </td>
+                     </tr>
+                 </table>
+             </div>
+         </div><!-- 제주먹거리-->
+         <div class="tb_box" id="tab2">
+             <a href="#tab2" class="tb_btn">제주 볼거리</a>
+             <div class="tb_con">
+               <h3 class="tb_title">제주볼거리</h3>
+               <div class="ban"><img src="data/sub_item3.jpg" alt=""></div>
+             </div>
+         </div><!--제주볼거리-->
+         <div class="tb_box" id="tab3">
+             <a href="#tab3" class="tb_btn">숙박</a>
+             <div class="tb_con">
+               <h3 class="tb_title">숙박</h3>
+               <div class="ban"><img src="data/sub_item6.jpg" alt=""></div>
+             </div>
+         </div><!-- 숙박-->   
+     </div> 
+     <footer class="ft">
+         <nav class="fnb">
+             <ul class="menu">
+                 <li class="item1"><a href="sub2.html#tab1">이용약관</a></li>
+                 <li class="item2"><a href="sub2.html#tab2">개인정보처리방침</a></li>
+             </ul>
+         </nav>
+         <p class="copyright">ALL COPYRIGHT BY &copy; JEJU TRIP </p>
+     </footer>       
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
